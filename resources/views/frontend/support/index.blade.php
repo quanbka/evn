@@ -25,7 +25,7 @@
       <div class="ui grid">
         <div class="computer only row">
           <div class="ui container">
-            @include('frontend.menu')
+            @include('frontend/menu')
 
           </div>
         </div>

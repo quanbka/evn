@@ -1,1 +1,1 @@
-404
+<a href="/">Trang chủ</a>

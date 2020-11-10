@@ -18,7 +18,7 @@ class ShopController extends Controller
             $this->buildQueryByOrderBy($query, $request);
             $products = $query->paginate(36);
         }
-        return view('frontend.shop.category', compact('title', 'products'));
+        return view('frontend.index.index', compact('title', 'products'));
     }
 
     private function buildQueryByOrderBy($query, Request $request){

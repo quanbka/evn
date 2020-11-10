@@ -16,6 +16,9 @@
 Route::get('/', 'Frontend\ShopController@shop')->name('shop');
 Route::get('/gioi-thieu', 'Frontend\ShopController@about')->name('about');
 Route::get('/ho-tro', 'Frontend\ShopController@support')->name('support');
+Route::get('/san-pham', 'Frontend\ShopController@sanPham')->name('product');
+Route::get('/nha-cung-cap', 'Frontend\ShopController@nhaCungCap')->name('provider');
+Route::get('/lien-he', 'Frontend\ShopController@contact')->name('contact');
 // Route::get('/cua-hang/{slug}_{id}.html', 'Frontend\ShopController@category')->name('danh-muc-san-pham');
 // Route::get('/san-pham/{slug}_{id}.html', 'Frontend\ShopController@product')->name('chi-tiet-san-pham');
 // Route::get('/danh-muc/{slug}_{id}.html', 'Frontend\BlogController@category')->name('danh-muc-bai-viet');

@@ -29,6 +29,18 @@ class ShopController extends Controller
       return view('frontend.support.index');
     }
 
+    public function sanPham () {
+      return view('frontend.product.index');
+    }
+
+    public function nhaCungCap () {
+      return view('frontend.provider.index');
+    }
+
+    public function contact () {
+      return view('frontend.contact.index');
+    }
+
     private function buildQueryByOrderBy($query, Request $request){
         if($request->has('order_by')){
             if(!is_array($request->input('order_by'))){

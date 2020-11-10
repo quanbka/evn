@@ -59,12 +59,8 @@ class Product extends Model
 
     public static function search ($keyword) {
         return \App\Models\Product
-            // ::where('name', 'like', "%$keyword%")
             ::select('*')
-            ->addSelect(\DB::raw("MATCH(name)AGAINST('$keyword') as score"))
-            ->whereRaw("MATCH(name, description, content)AGAINST('$keyword')")
-            ->orWhere('name', 'like', "%$keyword%")
-            ->orderBy("score", 'desc');
+            ->where('name', 'like', "%$keyword%");
 
     }
 

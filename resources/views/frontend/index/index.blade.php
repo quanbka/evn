@@ -37,7 +37,7 @@
                   </div>
                   <div class="eleven wide column">
                     <div class="top-menu">
-                      <a href="intro.html" class="menu-item font-14 text-bold text-uppercase">Giới thiệu</a>
+                      <a href="{{ route('about') }}" class="menu-item font-14 text-bold text-uppercase">Giới thiệu</a>
                       <a href="support.html" class="menu-item font-14 text-bold text-uppercase">Hỗ trợ</a>
                       <a href="#" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
                       <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>

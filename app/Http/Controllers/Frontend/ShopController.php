@@ -21,6 +21,14 @@ class ShopController extends Controller
         return view('frontend.index.index', compact('title', 'products'));
     }
 
+    public function about () {
+      return view('frontend.about.index');
+    }
+
+    public function support () {
+      return view('frontend.support.index');
+    }
+
     private function buildQueryByOrderBy($query, Request $request){
         if($request->has('order_by')){
             if(!is_array($request->input('order_by'))){
@@ -99,9 +107,9 @@ class ShopController extends Controller
     }
 
     public function redirect ($keyword) {
-        $keyword = str_replace("-", " ", $keyword);
+        // $keyword = str_replace("-", " ", $keyword);
         // print_r($keyword); die;
-        return \Redirect::route('search', ['q' => $keyword]);
+        // return \Redirect::route('search', ['q' => $keyword]);
     }
 
     public function sale(){

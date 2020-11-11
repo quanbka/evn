@@ -57,7 +57,7 @@
     <div class="pull-right hidden-xs">
      Version:  <b>{{ config('app.version') }} </b>
     </div>
-    <strong>Copyright &copy; 2018 <a href="http://megaads.vn/" target="_blank">MegaAds</a>.</strong> All rights
+    <strong>Copyright &copy; 2018 <a href="#" target="_blank">EVN</a>.</strong> All rights
     reserved.
   </footer>
 

@@ -62,7 +62,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        \App::abort(403, 'Hiện tại trang không cho phép đăng ký');
+        // \App::abort(403, 'Hiện tại trang không cho phép đăng ký');
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

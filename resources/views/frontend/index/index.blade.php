@@ -36,55 +36,7 @@
           <div class="ui grid">
             <div class="computer only row">
               <div class="ui container">
-                <div class="ui grid front-menu">
-                  <div class="five wide column">
-                    <a href="index.html">
-                      <img class="logo" src="images/logo.png">
-                    </a>
-                  </div>
-                  <div class="eleven wide column">
-                    <div class="top-menu">
-                      <a href="intro.html" class="menu-item font-14 text-bold text-uppercase">Giới thiệu</a>
-                      <a href="support.html" class="menu-item font-14 text-bold text-uppercase">Hỗ trợ</a>
-                      <a href="#" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
-                      <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
-                      <div class=" menu-item ui icon input">
-                        <input class="prompt" type="text" placeholder="">
-                        <i class="search icon"></i>
-                      </div>
-                      <div class="results"></div>
-                    </div>
-                    <div class="bottom-menu">
-                      <div class="dropdown">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                          <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm </a>
-                          <img src="./images/angle-down-solid.png" />
-                        </div>
-                        <div class="dropdown-content">
-                          <ul>
-                            <li>EasySolar CBCNV điện</li>
-                            <li>EasySolar hộ dân</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <a href="provider.html" class="menu-item font-14 text-bold text-uppercase">Nhà cung cấp</a>
-                      <div class="dropdown">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                          <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
-                            class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
-                          </a>
-                          <img src="./images/angle-down-solid.png" />
-                        </div>
-                        <div class="dropdown-content">
-                          <ul>
-                            <li>Công cụ khảo sát EVNSOLAR</li>
-                            <li>Thủ tục về điện mặt trời</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                @include('frontend.menu')
 
               </div>
             </div>

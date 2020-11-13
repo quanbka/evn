@@ -34,4 +34,10 @@ $(document).ready(function () {
   $('.ui.accordion')
     .accordion()
     ;
+
+  $('.side-bar-close-icon').click(function () {
+    console.log('123')
+    $('#sidebar').removeClass('visible')
+    $('.pusher.dimmed').removeClass('dimmed')
+  })
 })

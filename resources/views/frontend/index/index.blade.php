@@ -31,7 +31,7 @@
     <div id="front-index-content"></div>
     <div id="fullpage">
       <div class="section" id="section0">
-        
+        @include('frontend.header')
         <div class="ui container">
           <div class="content">
             <p class="text-22 text-white mb-0 text-shadow">

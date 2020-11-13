@@ -11,14 +11,7 @@ use View;
 class ShopController extends Controller
 {
     public function shop (Request $request) {
-        $title = "Trang chủ";
-        $products = Product::orderBy('id', 'desc')->paginate(36);
-        if ($request->has('order_by')) {
-            $query = Product::where('id', '>', '1');
-            $this->buildQueryByOrderBy($query, $request);
-            $products = $query->paginate(36);
-        }
-        return view('frontend.index.index', compact('title', 'products'));
+        return view('frontend.index.index');
     }
 
     public function about () {

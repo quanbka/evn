@@ -19,6 +19,29 @@ Route::get('/ho-tro', 'Frontend\ShopController@support')->name('support');
 Route::get('/san-pham', 'Frontend\ShopController@sanPham')->name('product');
 Route::get('/nha-cung-cap', 'Frontend\ShopController@nhaCungCap')->name('provider');
 Route::get('/lien-he', 'Frontend\ShopController@contact')->name('contact');
+Route::get('/tu-van', 'Frontend\ShopController@tuVan')->name('tuVan');
+
+Route::get('/index.html', function () {
+  return redirect('/');
+});
+Route::get('/intro.html', function () {
+  return redirect('/gioi-thieu');
+});
+Route::get('/support.html', function () {
+  return redirect('/ho-tro');
+});
+Route::get('/contact.html', function () {
+  return redirect('/lien-he');
+});
+Route::get('/product.html', function () {
+  return redirect('/san-pham');
+});
+Route::get('/provider.html', function () {
+  return redirect('/nha-cung-cap');
+});
+Route::get('/advisory.html', function () {
+  return redirect('/tu-van');
+});
 // Route::get('/cua-hang/{slug}_{id}.html', 'Frontend\ShopController@category')->name('danh-muc-san-pham');
 // Route::get('/san-pham/{slug}_{id}.html', 'Frontend\ShopController@product')->name('chi-tiet-san-pham');
 // Route::get('/danh-muc/{slug}_{id}.html', 'Frontend\BlogController@category')->name('danh-muc-bai-viet');

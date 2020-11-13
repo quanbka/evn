@@ -21,14 +21,141 @@
 <body>
 
   <div id="front-wrapper">
-    @include('frontend.header')
+    <div id="front-header">
+      <div class="ui grid">
+        <div class="computer only row">
+          <div class="ui container">
+            <div class="ui grid front-menu">
+              <div class="five wide column">
+                <a href="index.html">
+                  <img class="logo" src="images/logo.png">
+                </a>
+              </div>
+              <div class="eleven wide column">
+                <div class="top-menu">
+                  <div class="dropdown">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <a href="intro.html" class="item font-14 text-bold text-uppercase">Giới thiệu </a>
+                      <!-- <img src="./images/angle-down-solid.png" /> -->
+                    </div>
+                    <div class="dropdown-content">
+                      <ul>
+                        <li><a href="intro.html#section-1" >Về EVNFinance</a></li>
+                        <li><a href="intro.html#section-2">Về Easy Solar</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <a href="support.html" class="item font-14 text-bold text-uppercase">Hỗ trợ </a>
+                      <!-- <img src="./images/angle-down-solid.png" /> -->
+                    </div>
+                    <div class="dropdown-content">
+                      <ul>
+                        <li>Q&A</li>
+                        <li>Hướng dẫn</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="contact.html" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
+                  <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
+                  <div class=" menu-item ui icon input">
+                    <input class="prompt" type="text" placeholder="">
+                    <i class="search icon"></i>
+                  </div>
+                  <div class="results"></div>
+                </div>
+                <div class="bottom-menu">
+                  <div class="dropdown">
+                    <div style="display: flex; justify-content: space-between; align-items: center;" class="prd-active">
+                      <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm </a>
+                      <!-- <img src="./images/angle-down-solid.png" /> -->
+                    </div>
+                    <div class="dropdown-content">
+                      <ul>
+                        <li><a href="product.html">EasySolar CBCNV điện</a></li>
+                        <li><a href="product.html">EasySolar hộ dân</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <a href="provider.html" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+                      <!-- <img src="./images/angle-down-solid.png" /> -->
+                    </div>
+                    <div class="dropdown-content">
+                      <ul>
+                        <li><a href="provider.html#provider-section-1" >Chính sách</a></li>
+                        <li><a href="provider.html#provider-section-2" >Chức năng</a></li>
+                        <li><a href="provider.html#provider-section-3" >Đối tác</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <a href="advisory.html"
+                        class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
+                      </a>
+                      <!-- <img src="./images/angle-down-solid.png" /> -->
+                    </div>
+                    <div class="dropdown-content">
+                      <ul>
+                        <li><a href="https://solar.evn.com.vn/#/calculator" target="_blank">Công cụ khảo sát EVNSOLAR</a></li>
+                        <li>Thủ tục điện</li>
+                        <li>Pháp luật</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="tablet mobile only row">
+          <div class="column">
+            <div class="ui menu">
+              <a href="#" class="item">
+                <img class="logo" src="images/logo.png">
+              </a>
+              <div class="right menu">
+                <a id="mobile_item" class="item"><i class="bars icon"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pushable">
+        <div id="sidebar" class="ui sidebar other-sidebar vertical menu">
+          <button class="side-bar-close-icon"><i class="close icon"></i></button>
+          <div class="sidebar-search">
+            <div class="tem ui icon input">
+              <input class="prompt" type="text" placeholder="">
+              <i class="search icon"></i>
+            </div>
+          </div>
+          <a href="contact.html" class="item font-14 text-bold text-uppercase">Liên hệ</a>
+          <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm</a>
+          <a href="provider.html" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+          <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
+            class="item font-14 text-bold text-uppercase">Tư vấn
+            - trải nghiệm
+          </a>
+          <div class="siderbar-bottom">
+            <a href="intro.html" class="item font-14 text-bold text-uppercase">Giới thiệu</a>
+            <a href="support.html" class="item font-14 text-bold text-uppercase">Hỗ trợ</a>
+            <a href="#" class="item font-14 text-bold text-uppercase">Đăng nhập</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="front-content">
       <div id="cover-intro">
         <div class="ui container">
-          <div class="text-60 text-uppercase text-white text-bold mb-20 text-shadow">Sản phẩm</div>
-          <div class="text-40 text-bold text-white mb-30 text-shadow">EasySolar CBCNV điện</div>
-          <a class="button-primary anchor go-to-div" href="index.html#dang-ky">
-            Đăng kí vay
+          <div class="text-60 text-uppercase text-white text-bold text-shadow">Sản phẩm</div>
+          <div class="text-40 text-bold text-white mb-20 text-shadow">EasySolar CBCNV điện</div>
+          <a class="button-primary anchor product-register-btn" href="index.html#dang-ky">
+            Đăng ký vay
           </a>
         </div>
       </div>
@@ -156,7 +283,16 @@
                 </div>
               </div>
             </div>
-            <div class="three column centered row">
+            <div class="three column row">
+              <div class="column item-card">
+                <div>
+                  <img src=" images/money-flow.png" />
+                  <div class="text-20 text-red align-center text-uppercase text-bold title">NGUỒN TRẢ NỢ</div>
+                  <div class="text-14 text-center desc">
+                    Từ lương, từ tiền bán điện hoặc <br/> nguồn khác
+                  </div>
+                </div>
+              </div>
               <div class="column item-card">
                 <div>
                   <img src=" images/icon-16.png" />
@@ -249,7 +385,7 @@
                 <div class="text-60 text-white mt-40 step-order">01</div>
                 <div class="step-content">
                   <div class="text-20 text-bold text-white mt-40">Trải nghiệm</div>
-                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
+                  <div class="text-12 text-white mt-40 align-left">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
                     đăng ký</div>
                 </div>
               </div>
@@ -263,22 +399,20 @@
                 <div class="text-60 text-white mt-40 step-order">02</div>
                 <div class="step-content">
                   <div class="text-20 text-bold text-white mt-40">Khảo sát</div>
-                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
-                    đăng ký</div>
+                  <div class="text-12 text-white mt-40 align-left">Nhà thầu khảo sát điều kiện lắp đặt và khả năng đấu</div>
                 </div>
               </div>
             </div>
             <div class="s3-step column">
               <div class="title">
                 <div class="text-white text-60 p1">03</div>
-                <div class="text-white text-20 text-bold p2">Kí kết</div>
+                <div class="text-white text-20 text-bold p2">Ký kết</div>
               </div>
               <div class="overlay">
                 <div class="text-60 text-white mt-40 step-order">03</div>
                 <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Kí kết</div>
-                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
-                    đăng ký</div>
+                  <div class="text-20 text-bold text-white mt-40">Ký kết</div>
+                  <div class="text-12 text-white mt-40 align-left">Ký hợp đồng vay và hợp đồng EPC</div>
                 </div>
               </div>
             </div>
@@ -291,8 +425,7 @@
                 <div class="text-60 text-white mt-40 step-order">04</div>
                 <div class="step-content">
                   <div class="text-20 text-bold text-white mt-40">Lắp đặt</div>
-                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
-                    đăng ký</div>
+                  <div class="text-12 text-white mt-40 align-left">Thi công lắp đặt và nghiệm thu</div>
                 </div>
               </div>
             </div>
@@ -305,8 +438,7 @@
                 <div class="text-60 text-white mt-40 step-order">05</div>
                 <div class="step-content">
                   <div class="text-20 text-bold text-white mt-40">Giải ngân</div>
-                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
-                    đăng ký</div>
+                  <div class="text-12 text-white mt-40 align-left">Giải ngân thanh toán tiền mua sắm thiết bị</div>
                 </div>
               </div>
             </div>
@@ -319,8 +451,7 @@
                 <div class="text-60 text-white mt-40 step-order">06</div>
                 <div class="step-content">
                   <div class="text-20 text-bold text-white mt-40">Vận hành</div>
-                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
-                    đăng ký</div>
+                  <div class="text-12 text-white mt-40 align-left">Nhà cung cấp hỗ trợ vận hành và bảo trì thiết bị</div>
                 </div>
               </div>
             </div>
@@ -333,8 +464,7 @@
                 <div class="text-60 text-white mt-40 step-order">07</div>
                 <div class="step-content">
                   <div class="text-20 text-bold text-white mt-40">Tất toán</div>
-                  <div class="text-12 text-white mt-40 ">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
-                    đăng ký</div>
+                  <div class="text-12 text-white mt-40 align-left">Khách hàng đủ năng lực tài chính tất toán khoản vay</div>
                 </div>
               </div>
             </div>

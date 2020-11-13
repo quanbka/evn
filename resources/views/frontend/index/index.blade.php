@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -32,19 +31,147 @@
     <div id="front-index-content"></div>
     <div id="fullpage">
       <div class="section" id="section0">
-        @include('frontend.header')
+        <div id="front-header">
+          <div class="ui grid">
+            <div class="computer only row">
+              <div class="ui container">
+                <div class="ui grid front-menu">
+                  <div class="five wide column">
+                    <a href="index.html">
+                      <img class="logo" src="images/logo.png">
+                    </a>
+                  </div>
+                  <div class="eleven wide column">
+                    <div class="top-menu">
+                      <div class="dropdown">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="intro.html" class="item font-14 text-bold text-uppercase">Giới thiệu </a>
+                          <!-- <img src="./images/angle-down-solid.png" /> -->
+                        </div>
+                        <div class="dropdown-content">
+                          <ul>
+                            <li><a href="intro.html#section-1" >Về EVNFinance</a></li>
+                            <li><a href="intro.html#section-2">Về Easy Solar</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="dropdown">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="support.html" class="item font-14 text-bold text-uppercase">Hỗ trợ </a>
+                          <!-- <img src="./images/angle-down-solid.png" /> -->
+                        </div>
+                        <div class="dropdown-content">
+                          <ul>
+                            <li><a href="support.html">Q&A</a></li>
+                            <li><a href="support.html">Hướng dẫn</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <a href="contact.html" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
+                      <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
+                      <div class=" menu-item ui icon input">
+                        <input class="prompt" type="text" placeholder="">
+                        <i class="search icon"></i>
+                      </div>
+                      <div class="results"></div>
+                    </div>
+                    <div class="bottom-menu">
+                      <div class="dropdown">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm </a>
+                          <!-- <img src="./images/angle-down-solid.png" /> -->
+                        </div>
+                        <div class="dropdown-content">
+                          <ul>
+                            <li><a href="product.html">EasySolar CBCNV điệ</a>n</li>
+                            <li><a href="product.html">EasySolar hộ dâ</a>n</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="dropdown">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="provider.html" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+                          <!-- <img src="./images/angle-down-solid.png" /> -->
+                        </div>
+                        <div class="dropdown-content">
+                          <ul>
+                            <li><a href="provider.html#provider-section-1" >Chính sách</a></li>
+                            <li><a href="provider.html#provider-section-2" >Chức năng</a></li>
+                            <li><a href="provider.html#provider-section-3" >Đối tác</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="dropdown">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="advisory.html"
+                            class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
+                          </a>
+                          <!-- <img src="./images/angle-down-solid.png" /> -->
+                        </div>
+                        <div class="dropdown-content">
+                          <ul>
+                            <li><a href="https://solar.evn.com.vn/#/calculator" target="_blank">Công cụ khảo sát EVNSOLAR</a></li>
+                            <li>Thủ tục điện</li>
+                            <li>Pháp luật</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="tablet mobile only row">
+              <div class="column">
+                <div class="ui menu">
+                  <a href="#" class="item">
+                    <img class="logo" src="images/logo.png">
+                  </a>
+                  <div class="right menu">
+                    <a id="mobile_item" class="item"><i class="bars icon"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pushable">
+            <div id="sidebar" class="ui sidebar index-sidebar vertical menu">
+              <button class="side-bar-close-icon"><i class="close icon"></i></button>
+              <div class="sidebar-search">
+                <div class="tem ui icon input">
+                  <input class="prompt" type="text" placeholder="">
+                  <i class="search icon"></i>
+                </div>
+              </div>
+              <a href="contact.html" class="item font-14 text-bold text-uppercase">Liên hệ</a>
+              <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm</a>
+              <a href="provider.html" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+              <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
+                class="item font-14 text-bold text-uppercase">Tư vấn
+                - trải nghiệm
+              </a>
+              <div class="siderbar-bottom">
+                <a href="intro.html" class="item font-14 text-bold text-uppercase">Giới thiệu</a>
+                <a href="support.html" class="item font-14 text-bold text-uppercase">Hỗ trợ</a>
+                <a href="#" class="item font-14 text-bold text-uppercase">Đăng nhập</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="ui container">
           <div class="content">
-            <p class="text-22 text-white mb-0">
+            <p class="text-22 text-white mb-0 text-shadow">
               Chào mừng bạn đến với
               <img class='lg1' src="images/lg1.png" />
             </p>
             <hr />
-            <h1 class="text-60 text-bold text-white mt-0 mb-20 text-shadow">Giải pháp tài chính toàn diện cho Điện mặt
+            <h1 class="text-60 text-bold text-white mt-0 mb-20 text-shadow register-btn">Giải pháp tài chính toàn diện cho Điện mặt
               trời mái nhà
             </h1>
             <a class="button-primary" href="#dang-ky">
-              Đăng kí vay
+              Đăng ký vay
             </a>
 
 
@@ -107,7 +234,7 @@
               <div class="swiper-slide">
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
-                    <div class="text-20 p1 text-white">Easy Solar</div>
+                    <div class="text-20 p1 text-white"><img class="logo-solution" src="./images/lg4.png" /></div>
                     <div class="text-36 p2 text-white mt-30">Giải pháp Kết nối hiệu quả</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
@@ -119,7 +246,7 @@
               <div class="swiper-slide">
                 <div class="ui grid">
                   <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
-                    <div class="text-20 p1 text-white">Easy Solar</div>
+                    <div class="text-20 p1 text-white"><img class="logo-solution" src="./images/lg4.png" /></div>
                     <div class="text-36 p2 text-white mt-30">Giải pháp Tư vấn thông minh</div>
                     <div class="text-20 p3">Giới thiệu</div>
                   </div>
@@ -166,7 +293,7 @@
                 khách hàng giải pháp vay với thủ tục đơn giản, chính sách giá tối ưu và chất lượng sản phẩm được đảm bảo
                 bởi sự đồng hành trong dài hạn của EVNFinance và các nhà cung cấp uy tín</div>
             </div>
-            <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
+            <div class="eleven wide computer ten wide tablet sixteen wide mobile column right-content">
               <div class="blocks ui grid">
                 <div class="block seven wide mobile seven wide table computer column">
                   <div class="text-15 text-white">
@@ -403,7 +530,8 @@
                     </div>
                     <div class="field">
                       <label class="computer only">Năm sinh</label>
-                      <input type="number" placeholder="Năm sinh" name="yob" onkeyup="handleChangeYOB(this.value)">
+                      <input type="text" onkeydown="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                        placeholder="Năm sinh" name="yob" onkeyup="handleChangeYOB(this.value)">
                       <div class="field-error"></div>
                     </div>
                   </div>
@@ -433,11 +561,22 @@
 
                 <div class="field">
                   <div class="two fields">
-                    <div class="field">
-                      <label class="computer only">Bạn đang công tác tại</label>
-                      <select id="working-place" class="ui fluid dropdown"
+                    <div class="field hide-mobile">
+                      <label class="computer only">Nghề nghiệp</label>
+                      <select id="working-place" class="ui fluid dropdown" placeholder="Nghề nghiệp"
                         onchange="handleChangeWorkingPlace(this.value)">
-                        <option value="" hidden>Bạn đang công tác tại</option>
+                        <option value=""></option>
+                        <option value="1">Ngành điện</option>
+                        <option value="2">Ngoài ngành điện</option>
+                        <option value="3">Khác</option>
+                      </select>
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="field hide-desktop">
+                      <label class="computer only">Nghề nghiệp</label>
+                      <select id="working-place" class="ui fluid dropdown" placeholder="Nghề nghiệp"
+                        onchange="handleChangeWorkingPlace(this.value)">
+                        <option value="">Nghề nghiệp</option>
                         <option value="1">Ngành điện</option>
                         <option value="2">Ngoài ngành điện</option>
                         <option value="3">Khác</option>
@@ -471,11 +610,22 @@
                 </div>
 
                 <div class="field">
-                  <div class="two fields">
-                    <div class="field non-required">
+                  <div class="two fields hide-mobile">
+                    <div class="field non-required hide-mobile">
                       <label class="computer only">Hợp đồng lao động</label>
                       <select id="contract_duration_type" class="ui fluid dropdown">
-                        <option value="" hidden>Hợp đồng lao động</option>
+                        <option value=""></option>
+                        <option value="1">1 năm</option>
+                        <option value="2">2 năm</option>
+                        <option value="3">3 năm</option>
+                        <option value="4">Không giới hạn</option>
+                        <option value="5">Khác</option>
+                      </select>
+                    </div>
+                    <div class="field non-required hide-desktop">
+                      <label class="computer only">Hợp đồng lao động</label>
+                      <select id="contract_duration_type" class="ui fluid dropdown">
+                        <option value="">Hợp đồng lao động</option>
                         <option value="1">1 năm</option>
                         <option value="2">2 năm</option>
                         <option value="3">3 năm</option>
@@ -536,7 +686,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h3>Điều kiện và điều khoản</h3>
-              <span class="close">&times;</span>
+              <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
             </div>
             <p>Bằng việc sử dụng hoặc duyệt trang web này ("Trang web") hay bất kỳ trang web nào khác ("Trang web của
               EVNFinance") của EVNFinance, bạn xác nhận rằng mình đã đọc, hiểu và đồng ý chịu sự ràng buộc của các Điều
@@ -715,7 +865,7 @@
 
       function handleChangePhone(value) {
         $('#register-form').find('[name="phone_number"]').parent().find('.field-error').hide();
-        if (value && value.trim() === '') {
+        if (!value || value.trim() === '') {
           $('#register-form').find('[name="phone_number"]').parent().find('.field-error').html("Vui lòng nhập Số điện thoại!");
           $('#register-form').find('[name="phone_number"]').parent().find('.field-error').show();
         }
@@ -737,6 +887,10 @@
         if (value.startsWith('0') && !phoneHeader.includes(value.substring(1, 3))
           || value.startsWith('84') && !phoneHeader.includes(value.substring(2, 4))) {
           $('#register-form').find('[name="phone_number"]').parent().find('.field-error').html("Số điện thoại không tồn tại");
+          $('#register-form').find('[name="phone_number"]').parent().find('.field-error').show();
+        }
+        if (!value || value.trim() === '') {
+          $('#register-form').find('[name="phone_number"]').parent().find('.field-error').html("Vui lòng nhập Số điện thoại!");
           $('#register-form').find('[name="phone_number"]').parent().find('.field-error').show();
         }
       }
@@ -767,6 +921,8 @@
           }
           $('#register-form').find('[name="email"]').parent().find('.field-error').html("Email không đúng định dạng!");
           $('#register-form').find('[name="email"]').parent().find('.field-error').show();
+        } else {
+          $('#register-form').find('[name="email"]').parent().find('.field-error').hide();
         }
       }
 
@@ -941,7 +1097,7 @@
             "personal_information": {
               "birthday": str[1].value ? `${str[1].value}-01-01` : '',
               "card_number": str[2].value,
-              "email": str[4].value,
+              "email": str[4].value || null,
               "name": str[0].value,
               "phone_number": str[3].value
             },

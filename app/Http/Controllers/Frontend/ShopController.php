@@ -41,6 +41,10 @@ class ShopController extends Controller
       return view('frontend.contact.index');
     }
 
+    public function tuvan () {
+      return view('frontend.tuvan.index');
+    }
+
     private function buildQueryByOrderBy($query, Request $request){
         if($request->has('order_by')){
             if(!is_array($request->input('order_by'))){

@@ -4,7 +4,7 @@
       <div class="ui container">
         <div class="ui grid front-menu">
           <div class="five wide column">
-            <a href="index.html">
+            <a href="/">
               <img class="logo" src="images/logo.png">
             </a>
           </div>
@@ -12,30 +12,30 @@
             <div class="top-menu">
               <div class="dropdown">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <a href="intro.html" class="item font-14 text-bold text-uppercase">Giới thiệu </a>
+                  <a href="/gioi-thieu" class="item font-14 text-bold text-uppercase">Giới thiệu </a>
                   <!-- <img src="./images/angle-down-solid.png" /> -->
                 </div>
                 <div class="dropdown-content">
                   <ul>
-                    <li><a href="intro.html#section-1" >Về EVNFinance</a></li>
-                    <li><a href="intro.html#section-2">Về Easy Solar</a></li>
+                    <li><a href="/gioi-thieu#section-1" >Về EVNFinance</a></li>
+                    <li><a href="/gioi-thieu#section-2">Về Easy Solar</a></li>
                   </ul>
                 </div>
               </div>
               <div class="dropdown">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <a href="support.html" class="item font-14 text-bold text-uppercase">Hỗ trợ </a>
+                  <a href="/ho-tro" class="item font-14 text-bold text-uppercase">Hỗ trợ </a>
                   <!-- <img src="./images/angle-down-solid.png" /> -->
                 </div>
                 <div class="dropdown-content">
                   <ul>
-                    <li><a href="support.html">Q&A</a></li>
-                    <li><a href="support.html">Hướng dẫn</a></li>
+                    <li><a href="/ho-tro">Q&A</a></li>
+                    <li><a href="/ho-tro">Hướng dẫn</a></li>
                   </ul>
                 </div>
               </div>
-              <a href="contact.html" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
-              <a href="#" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
+              <a href="/lien-he" class="menu-item font-14 text-bold text-uppercase">Liên hệ</a>
+              <a href="/login" class="menu-item font-14 text-bold text-uppercase">Đăng nhập</a>
               <div class=" menu-item ui icon input">
                 <input class="prompt" type="text" placeholder="">
                 <i class="search icon"></i>
@@ -45,32 +45,32 @@
             <div class="bottom-menu">
               <div class="dropdown">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm </a>
+                  <a href="/san-pham" class="item font-14 text-bold text-uppercase">Sản phẩm </a>
                   <!-- <img src="./images/angle-down-solid.png" /> -->
                 </div>
                 <div class="dropdown-content">
                   <ul>
-                    <li><a href="product.html">EasySolar CBCNV điệ</a>n</li>
-                    <li><a href="product.html">EasySolar hộ dâ</a>n</li>
+                    <li><a href="/san-pham">EasySolar CBCNV điện</a></li>
+                    <li><a href="/san-pham">EasySolar hộ dân</a></li>
                   </ul>
                 </div>
               </div>
               <div class="dropdown">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <a href="provider.html" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+                  <a href="/nha-cung-cap" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
                   <!-- <img src="./images/angle-down-solid.png" /> -->
                 </div>
                 <div class="dropdown-content">
                   <ul>
-                    <li><a href="provider.html#provider-section-1" >Chính sách</a></li>
-                    <li><a href="provider.html#provider-section-2" >Chức năng</a></li>
-                    <li><a href="provider.html#provider-section-3" >Đối tác</a></li>
+                    <li><a href="/nha-cung-cap#provider-section-1" >Chính sách</a></li>
+                    <li><a href="/nha-cung-cap#provider-section-2" >Chức năng</a></li>
+                    <li><a href="/nha-cung-cap#provider-section-3" >Đối tác</a></li>
                   </ul>
                 </div>
               </div>
               <div class="dropdown">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <a href="advisory.html"
+                  <a href="/tu-van"
                     class="menu-item font-14 text-bold text-uppercase">Tư vấn - trải nghiệm
                   </a>
                   <!-- <img src="./images/angle-down-solid.png" /> -->
@@ -112,17 +112,17 @@
           <i class="search icon"></i>
         </div>
       </div>
-      <a href="contact.html" class="item font-14 text-bold text-uppercase">Liên hệ</a>
-      <a href="product.html" class="item font-14 text-bold text-uppercase">Sản phẩm</a>
-      <a href="provider.html" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
+      <a href="/lien-he" class="item font-14 text-bold text-uppercase">Liên hệ</a>
+      <a href="/san-pham" class="item font-14 text-bold text-uppercase">Sản phẩm</a>
+      <a href="/nha-cung-cap" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
       <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
         class="item font-14 text-bold text-uppercase">Tư vấn
         - trải nghiệm
       </a>
       <div class="siderbar-bottom">
-        <a href="intro.html" class="item font-14 text-bold text-uppercase">Giới thiệu</a>
-        <a href="support.html" class="item font-14 text-bold text-uppercase">Hỗ trợ</a>
-        <a href="#" class="item font-14 text-bold text-uppercase">Đăng nhập</a>
+        <a href="/gioi-thieu" class="item font-14 text-bold text-uppercase">Giới thiệu</a>
+        <a href="/ho-tro" class="item font-14 text-bold text-uppercase">Hỗ trợ</a>
+        <a href="/login" class="item font-14 text-bold text-uppercase">Đăng nhập</a>
       </div>
     </div>
   </div>

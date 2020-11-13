@@ -6,10 +6,17 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Config;
 use View;
 
 class ShopController extends Controller
 {
+
+    public function handle($slug = 'home') {
+        $configs = Config::where('page', $slug)->get();
+        return view('frontend.'.$slug.'.index');
+    }
+
     public function shop (Request $request) {
         return view('frontend.index.index');
     }

@@ -19,33 +19,47 @@
         <div class="ui container">
           <div class="content">
             <p class="text-22 text-white mb-0 text-shadow">
-              Chào mừng bạn đến với
+              {{ getConfig('welcome.title') }}
               <img class='lg1' src="images/lg1.png" />
             </p>
             <hr />
-            <h1 class="text-60 text-bold text-white mt-0 mb-20 text-shadow register-btn">Giải pháp tài chính toàn diện cho Điện mặt
-              trời mái nhà
+            <h1 class="text-60 text-bold text-white mt-0 mb-20 text-shadow register-btn">
+                 {{ getConfig('welcome.text') }}
             </h1>
-            <a class="button-primary" href="#dang-ky">
-              Đăng ký vay
+            <a class="button-primary" href="{{ getConfig('welcome.button_url') }}">
+                {{ getConfig('welcome.button_text') }}
             </a>
 
 
           </div>
+          <?php
+            $navigationConfig = getConfig('navigation');
+            $navigationConfig = json_decode($navigationConfig);
+          ?>
           <div class="navigation-container">
             <div class="navigation">
-              <!-- <div class="nav-item text-20 text-bold computer tablet only">Sample 1</div> -->
-              <!-- <div class="nav-item text-20 text-bold active computer tablet only">Sample 2</div> -->
-              <a href="#giai-phap" class="nav-item text-20 text-bold">Giải pháp</a>
-              <a href="#loi-ich" class="nav-item text-20 text-bold">Lợi ích</a>
-              <a href="#thu-tuc" class="nav-item text-20 text-bold">Thủ tục</a>
+                @foreach ($navigationConfig as $item)
+                  <a href="{{ $item->url }}" class="nav-item text-20 text-bold">{{ $item->text }}</a>
+                @endforeach
             </div>
           </div>
 
           <div class="mobile only icon-box ">
             <div class="ui container">
               <div class="ui equal width grid">
-                <div class="column">
+                  <?php
+                    $slides = getConfig('slides', '[]');
+                    $slides = json_decode($slides);
+                  ?>
+                  @foreach ($slides as $item)
+                      <div class="column">
+                        <div class="img-box">
+                          <img src="{{ $item->image_url }}">
+                        </div>
+                        <div class="text-10 text-white align-center">{{ $item->text }}</div>
+                      </div>
+                  @endforeach
+                <!-- <div class="column">
                   <div class="img-box">
                     <img src="images/icon-23.png">
                   </div>
@@ -64,7 +78,7 @@
                     <img src="images/icon-25.png">
                   </div>
                   <div class="text-10 text-white align-center">CBCNV Nghành điện</div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

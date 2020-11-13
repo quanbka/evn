@@ -13,8 +13,11 @@ class ShopController extends Controller
 {
 
     public function handle($slug = 'home') {
-        $GLOBALS['configs'] = Config::where('page', $slug)->get();
-        
+        $configs = Config::whereIn('page', [$slug, 'global'])->get();
+        $GLOBALS['configs'] = [];
+        foreach($configs as $config) {
+            $GLOBALS['configs'][$config->key] = $config->value;
+        }
         return view('frontend.'.$slug.'.index');
     }
 

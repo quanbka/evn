@@ -37,7 +37,10 @@ require __DIR__.'/../bootstrap/autoload.php';
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
 function getConfig($key, $default = false) {
-    return $GLOBALS['configs'];
+    if(isset($GLOBALS['configs'][$key])) {
+        return $GLOBALS['configs'][$key];
+    }
+    return $default;
 }
 
 /*

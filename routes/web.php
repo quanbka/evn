@@ -11,48 +11,6 @@
 |
 */
 
-
-// Route::get('/', 'Frontend\IndexController@index');
-Route::get('/', 'Frontend\ShopController@handle');
-
-Route::get('/index.html', function () {
-  return redirect('/');
-});
-Route::get('/intro.html', function () {
-  return redirect('/gioi-thieu');
-});
-Route::get('/support.html', function () {
-  return redirect('/ho-tro');
-});
-Route::get('/contact.html', function () {
-  return redirect('/lien-he');
-});
-Route::get('/product.html', function () {
-  return redirect('/san-pham');
-});
-Route::get('/provider.html', function () {
-  return redirect('/nha-cung-cap');
-});
-Route::get('/advisory.html', function () {
-  return redirect('/tu-van');
-});
-
-Route::get('/{slug}', 'Frontend\ShopController@handle');
-// Route::get('/cua-hang/{slug}_{id}.html', 'Frontend\ShopController@category')->name('danh-muc-san-pham');
-// Route::get('/san-pham/{slug}_{id}.html', 'Frontend\ShopController@product')->name('chi-tiet-san-pham');
-// Route::get('/danh-muc/{slug}_{id}.html', 'Frontend\BlogController@category')->name('danh-muc-bai-viet');
-// Route::get('/bai-viet/{slug}_{id}.html', 'Frontend\BlogController@post')->name('chi-tiet-bai-viet');
-// Route::get('/hang-moi-ve', 'Frontend\ShopController@recent');
-// Route::get('/product/{keyword}', 'Frontend\ShopController@redirect');
-// Route::get('/dang-giam-gia', 'Frontend\ShopController@sale');
-// Route::get('/tim-kiem', 'Frontend\ShopController@search')->name('search');
-// Route::get('/bo-suu-tap', 'Frontend\ShopController@collection');
-// Route::get('/thiet-ke-noi-that', 'Frontend\ShopController@design');
-// Route::get('/dat-hang/{id?}', 'Frontend\ShopController@order')->name('dat-hang');
-// Route::post('/dat-hang', 'Frontend\ShopController@sendOrder')->name('send-order');
-// route::get('/sitemap.xml', 'Frontend\IndexController@sitemap');
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -67,3 +25,6 @@ Route::get('/system/order', 'System\ShopController@order')->name('system-shop-pr
 Route::get('/system/blog/blog', 'System\BlogController@blog')->name('system-blog-post');
 Route::get('/system/blog/category', 'System\BlogController@category')->name('system-blog-category');
 Route::post('/system/upload', 'System\IndexController@upload');
+
+Route::get('/', 'Frontend\ShopController@handle');
+Route::get('/{slug}', 'Frontend\ShopController@handle');

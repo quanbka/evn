@@ -4,6 +4,7 @@ namespace App\Http\Controllers\System;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use View;
 
 class IndexController extends Controller
 {
@@ -13,7 +14,13 @@ class IndexController extends Controller
         $this->middleware('auth');
     }
 
+    public function handle($slug) {
+      return view("system.$slug.index");
+    }
+
     public function index(){
+        $configs = \App\Models\Config::all();
+        View::share('configs', $configs);
         return view('system.index.index');
     }
 

@@ -103,6 +103,35 @@ LOCK TABLES `category_product` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `configs`
+--
+
+DROP TABLE IF EXISTS `configs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `configs` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `page` varchar(255) DEFAULT NULL,
+  `key` varchar(255) DEFAULT NULL,
+  `type` enum('text','image','slide') NOT NULL DEFAULT 'text',
+  `value` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `configs`
+--
+
+LOCK TABLES `configs` WRITE;
+/*!40000 ALTER TABLE `configs` DISABLE KEYS */;
+INSERT INTO `configs` VALUES (1,'home','title','text','EVN FC',NULL,NULL),(2,'home','welcome.title','text','Chào mừng bạn đến với',NULL,NULL),(3,'home','welcome.text','text','Giải pháp tài chính toàn diện cho Điện mặt trời mái nhà',NULL,NULL),(4,'home','welcome.button_text','text','Đăng ký vay',NULL,'2020-11-13 19:41:26'),(5,'home','welcome.button_url','text','#dang-ky',NULL,NULL),(6,'home','navigation','slide','[{    \"image_url\" : \"\",    \"text\" : \"Giải pháp\",    \"url\" : \"\"},{    \"image_url\" : \"\",    \"text\" : \"Lợi ích\",    \"url\" : \"\"},{    \"image_url\" : \"\",    \"text\" : \"Thủ tục\",    \"url\" : \"\"}]',NULL,'2020-11-13 19:25:39');
+/*!40000 ALTER TABLE `configs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -391,4 +420,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-13 15:03:55
+-- Dump completed on 2020-11-14  9:43:38

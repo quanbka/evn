@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/sys/dist/css/skins/skin-green.min.css">
   <link rel="stylesheet" href="/sys/css/pnotify.custom.min.css">
   <link rel="stylesheet" href="/sys/dist/css/app.custom.css">
+  <link rel="stylesheet" href="/sys/css/toastr.min.css">
 
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -34,6 +35,7 @@
   <script src="/sys/js/script/moment-timezone.js" charset="utf-8"></script>
   <script src="/sys/js/script/moment-timezone-with-data-2012-2022.min.js" charset="utf-8"></script>
 
+  <script type="text/javascript" src="/sys/js/script/toastr.min.js"></script>
   <script type="text/javascript" src="/sys/js/controller/system.js"></script>
   <script type="text/javascript" src="/sys/js/controller/base-controller.js"></script>
   <script type="text/javascript" src="/sys/js/controller/header-controller.js"></script>

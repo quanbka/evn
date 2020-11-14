@@ -1,4 +1,4 @@
-system.controller("ConfigControllerController", ConfigControllerController);
+system.controller("ConfigController", ConfigController);
 /**
  *
  * @param {type} $scope
@@ -6,157 +6,88 @@ system.controller("ConfigControllerController", ConfigControllerController);
  * @param {type} $rootScope
  * @returns {undefined}
  */
-function ConfigControllerController($scope, $http, $rootScope, $timeout, Upload) {
-    $scope.controllerName = "ConfigControllerController";
-    this.__proto__ = new BaseController($scope, $http, $rootScope);
-    this.initialize = function () {
-        $scope.filter = {};
-        $scope.getAllCategories();
-        $scope.getConfigControllers();
-        $scope.modes =
-            {
-            create : {
-                title : "Tạo sản phẩm mới",
-                buttonLabel: "Tạo",
-
-            },
-            edit : {
-                title : "Sửa sản phẩm",
-                buttonLabel: "Sửa",
-
-            }
-        };
-
+function ConfigController($scope, $http, $rootScope, $timeout, Upload) {
+    $scope.controllerName = "ConfigController";
+    this.__proto__ = new BaseController($scope, $http, $rootScope, Upload);
+    $scope.config = config;
+    if ($scope.config.type == 'slide') {
+        $scope.config.value = JSON.parse($scope.config.value);
     }
+    $scope.fileds = [
+        {
+            'field': 'id',
+            'editable': false,
+            'label': "ID",
+            'type': 'text'
+        },
+        {
+            'field': 'page',
+            'editable': false,
+            'label': "Trang",
+            'type': 'text'
+        },
+        {
+            'field': 'key',
+            'editable': false,
+            'label': "Key",
+            'type': 'text'
+        },
+        {
+            'field': 'value',
+            'editable': true,
+            'label': "Giá trị",
+            'type': 'textarea'
+        },
+    ];
 
-    $scope.createOrUpdate = function(){
-        console.log($scope.mode)
-        if($scope.mode == 'create'){
-            $scope.create();
+    $scope.uploadSlideImage = async function (file, item) {
+        if (file) {
+            var image = await $scope.upload(file);
+            if (image) {
+                $scope.$applyAsync(function () {
+                    item.image_url = image;
+                });
+            }
         }
+    };
 
-        if($scope.mode == 'edit'){
-            $scope.update();
+    $scope.uploadImage = async function (file) {
+        if (file) {
+            var image = await $scope.upload(file);
+            if (image) {
+                $scope.$applyAsync(function () {
+                    $scope.config.value = image;
+                });
+            }
         }
-    }
+    };
 
-    $scope.create = function(){
-        console.log($scope.object);
-        $http({
-            method : "post",
-            url : "/api/blog",
-            params : {
-                api_token : api_token,
-            },
-            data : $scope.object
-        }).then(function mySuccess(response) {
-            $scope.getConfigControllers();
-            $('#objectForm').modal('hide');
-        }, function myError(response) {
-            alert("Phát sinh lỗi, vui lòng liên hệ đội kỹ thuật!");
+    $scope.addSlide = function () {
+        $scope.config.value.push({
+            image_url: '',
+            text: '',
+            url: ''
         });
     }
 
-    $scope.update = function(){
-        $http({
-            method : "put",
-            url : "/api/blog/" + $scope.object.id,
-            params : {
-                api_token : api_token,
-            },
-            data : $scope.object
-        }).then(function mySuccess(response) {
-            $scope.getConfigControllers();
-            $('#objectForm').modal('hide');
-        }, function myError(response) {
-            alert("Phát sinh lỗi, vui lòng liên hệ đội kỹ thuật!");
-        });
+    $scope.removeSlide = function ($index) {
+        $scope.config.value.splice($index, 1);
     }
 
-    $scope.getAllCategories = function(){
-        $scope.categories = [];
-        $http({
-            method : "GET",
-            url : "/api/post-category",
-            params : {
-                api_token : api_token,
-                page_size : 0,
-            }
-        }).then(function mySuccess(response) {
-            array = response.data.data.data;
-            for (var i = 0; i < array.length; i++) {
-                // console.log(array[i])
-                $scope.categories[array[i].id] = array[i];
-            }
-
-            // console.log($scope.categories);
-        }, function myError(response) {
-            $scope.categories = [];
-            // console.log($scope.categories);
-        });
+    $scope.save = function () {
+        let data = angular.copy($scope.config);
+        if ($scope.config.type == 'slide') {
+            data.value = JSON.stringify($scope.config.value);
+        }
+        $http.put($scope.buildApiUrl('/api/config/' + $scope.config.id), data)
+            .then(function (res) {
+                if (res.data.status == 'success') {
+                    toastr.success('Thành công');
+                } else {
+                    toastr.error('Đã có lỗi xảy ra');
+                }
+            }, function (error) {
+                toastr.error('Đã có lỗi xảy ra');
+            })
     }
-
-    $scope.getConfigControllers = function(){
-        $http({
-            method : "GET",
-            url : "/api/blog",
-            params : {
-                api_token : api_token,
-                page_size : 20,
-                page: $scope.page_id,
-                category_id: $scope.filter.category_id,
-                order_by: '-id'
-            }
-        }).then(function mySuccess(response) {
-            $scope.blogs = response.data.data.data;
-            $scope.pagesCount = response.data.data.last_page;
-        }, function myError(response) {
-            $scope.blogs = [];
-        });
-    }
-
-    $scope.showCreateForm = function(){
-        $scope.mode = 'create';
-        $scope.object = {};
-        $('#objectForm').modal('show');
-    }
-
-    $scope.showEditForm = function(object){
-        $scope.mode = 'edit';
-        $scope.object = object
-        $scope.object = $scope.buildObject($scope.object);
-        $('#objectForm').modal('show');
-    }
-
-    $scope.buildObject = function(object){
-        object = object;
-
-        // object.slides = (object.slides);
-        // object.slides = (JSON.parse(object.slides))
-
-        return object;
-    }
-
-    $scope.showDeleteForm = function(){
-        $scope.mode = 'delete';
-        $('#deleteForm').modal('show');
-
-    }
-
-    $scope.options = options
-
-      // Called when the editor is completely ready.
-      $scope.onReady = function () {
-        // ...
-      };
-
-      $scope.remove = function(key){
-          console.log($scope.object.slides)
-          $scope.object.slides.splice(key, 1)
-          $scope.object.slides = $scope.object.slides;
-          console.log(key);
-      }
-
-    this.initialize();
-
 }

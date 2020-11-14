@@ -16,7 +16,7 @@
  * @param {type} $rootScope
  * @returns {BaseController}
  */
-function BaseController($scope, $http, $rootScope) {
+function BaseController($scope, $http, $rootScope, Upload) {
     var VIETNAMESE_N_ASCII_MAP = {
         "à": "a", "ả": "a", "ã": "a", "á": "a", "ạ": "a", "ă": "a", "ằ": "a", "ẳ": "a", "ẵ": "a",
         "ắ": "a", "ặ": "a", "â": "a", "ầ": "a", "ẩ": "a", "ẫ": "a", "ấ": "a", "ậ": "a", "đ": "d",
@@ -647,6 +647,57 @@ function BaseController($scope, $http, $rootScope) {
         return retVal;
     }
 
+    $scope.upload = function (file, callback) {
+        if (typeof file == 'array') {
+            file = file[0];
+        }
+        return new Promise(function(resolve, reject) {
+            Upload.upload({
+                url: '/system/upload',
+                data: {upload: file}
+            }).then(function (resp) {
+                if (resp.data.location) {
+                    let upload = '/' + 
+                    resp.data.location;
+                    resolve(upload);
+                } else {
+                    reject(0);
+                }
+            }, function (resp) {
+                reject(0);
+            });
+        }).catch(function () {
+            return '';
+        });
+    };
+
+    $scope.initOption = function () {
+        toastr.options = {
+            "autoDismiss": true,
+            "preventDuplicates": true,
+            "debug": false,
+            "positionClass": "toast-bottom-right",
+            "onclick": null,
+            "fadeIn": 300,
+            "fadeOut": 1000,
+            "timeOut": 3000,
+            "extendedTimeOut": 1000
+        };
+    }
+
+    $scope.buildApiUrl = function (url) {
+        let retval = api_domain + url;
+        if (retval.includes('?')) {
+            retval += '&';
+        } else {
+            retval += '?';
+        }
+
+        retval += 'api_token=' + api_token;
+        return retval;
+    }
+
+    $scope.initOption();
 }
 
 function showMessage(title, text, type, icon) {

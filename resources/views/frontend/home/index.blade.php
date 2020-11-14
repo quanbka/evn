@@ -48,7 +48,7 @@
             <div class="ui container">
               <div class="ui equal width grid">
                   <?php
-                    $slides = getConfig('slides', '[]');
+                    $slides = getConfig('customer', '[]');
                     $slides = json_decode($slides);
                   ?>
                   @foreach ($slides as $item)
@@ -59,26 +59,7 @@
                         <div class="text-10 text-white align-center">{{ $item->text }}</div>
                       </div>
                   @endforeach
-                <!-- <div class="column">
-                  <div class="img-box">
-                    <img src="images/icon-23.png">
-                  </div>
-                  <div class="text-10 text-white align-center">CBCNV Nghành điện</div>
-                </div>
 
-                <div class="column">
-                  <div class="img-box">
-                    <img src="images/icon-24.png">
-                  </div>
-                  <div class="text-10 text-white align-center">Khách hàng ngoài nghành điện</div>
-                </div>
-
-                <div class="column">
-                  <div class="img-box">
-                    <img src="images/icon-25.png">
-                  </div>
-                  <div class="text-10 text-white align-center">CBCNV Nghành điện</div>
-                </div> -->
               </div>
             </div>
           </div>
@@ -89,42 +70,25 @@
         <div class="ui container">
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="ui grid">
-                  <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
-                    <div class="text-20 p1 text-white"><img class="logo-solution" src="./images/lg4.png" /></div>
-                    <div class="text-36 p2 text-white mt-30">Giải pháp tài chính toàn diện</div>
-                    <div class="text-20 p3">Giới thiệu</div>
+              <?php
+                $slides = getConfig('slides', '[]');
+                $slides = json_decode($slides);
+              ?>
+              @foreach ($slides as $item)
+
+                  <div class="swiper-slide">
+                    <div class="ui grid">
+                      <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
+                        <div class="text-20 p1 text-white"><img class="logo-solution" src="./images/lg4.png" /></div>
+                        <div class="text-36 p2 text-white mt-30">{{ $item->text }}</div>
+                        {{-- <div class="text-20 p3">Giới thiệu</div> --}}
+                      </div>
+                      <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
+                        <img class="slide-img" src="{{ $item->image_url }}">
+                      </div>
+                    </div>
                   </div>
-                  <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
-                    <img class="slide-img" src="./images/Giải_pháp_tài_chính_toàn_diện.png">
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="ui grid">
-                  <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
-                    <div class="text-20 p1 text-white"><img class="logo-solution" src="./images/lg4.png" /></div>
-                    <div class="text-36 p2 text-white mt-30">Giải pháp Kết nối hiệu quả</div>
-                    <div class="text-20 p3">Giới thiệu</div>
-                  </div>
-                  <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
-                    <img class="slide-img" src="./images/Giải_Pháp_kết_nối_hiệu_quả.png">
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="ui grid">
-                  <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
-                    <div class="text-20 p1 text-white"><img class="logo-solution" src="./images/lg4.png" /></div>
-                    <div class="text-36 p2 text-white mt-30">Giải pháp Tư vấn thông minh</div>
-                    <div class="text-20 p3">Giới thiệu</div>
-                  </div>
-                  <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
-                    <img class="slide-img" src="./images/Giải_pháp_tư_vấn_thông_minh.png">
-                  </div>
-                </div>
-              </div>
+              @endforeach
             </div>
             <div class="slide-control">
               <div class="ui grid">

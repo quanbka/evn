@@ -118,93 +118,89 @@
               <div class="text-20 text-bold text-white mb-20">
                 Easy Solar
               </div>
-              <div class="text-14 text-white mb-20 text-justify">Easy Solar là gói sản phẩm được thiết kế chuyên biệt
-                dành riêng cho
-                các khách hàng có nhu cầu đầu tư trong lĩnh vực điện mặt trời áp mái mang lại nhiều lợi ích cho khách
-                hàng.</div>
-              <div class="text-14 text-white mb-20 text-justify">Cơ chế Một cửa – Một chính sách – Một chất lượng nhằm
-                mang tới cho
-                khách hàng giải pháp vay với thủ tục đơn giản, chính sách giá tối ưu và chất lượng sản phẩm được đảm bảo
-                bởi sự đồng hành trong dài hạn của EVNFinance và các nhà cung cấp uy tín</div>
+              <div class="text-14 text-white mb-20 text-justify">
+                {!! getConfig('reason') !!}
+              </div>
             </div>
             <div class="eleven wide computer ten wide tablet sixteen wide mobile column right-content">
               <div class="blocks ui grid">
                 <div class="block seven wide mobile seven wide table computer column">
                   <div class="text-15 text-white">
                     <div class="circle"></div>
-                    Hạn mức lên đến
+                    {!! getConfig('reason.text1') !!}
+
                   </div>
-                  <div class="text-60 text-white">500 triệu</div>
+                  <div class="text-60 text-white">
+                    {!! getConfig('reason.text2') !!}
+
+                  </div>
                 </div>
                 <div class="block seven wide mobile seven wide table computer column mt-30">
                   <div class="text-15 text-white">
                     <div class="circle"></div>
-                    Thủ tục
+                    {!! getConfig('reason.text3') !!}
+
                   </div>
-                  <div class="text-60 text-white ">Đơn giản</div>
+                  <div class="text-60 text-white ">
+                    {!! getConfig('reason.text4') !!}
+
+                  </div>
                 </div>
                 <div class="block seven wide mobile seven wide table computer column ml-40">
                   <div class="text-15 text-white">
                     <div class="circle"></div>
-                    <span class="computer tablet only">Giá trị vay dự án tối đa</span>
-                    <span class="mobile only">Giá trị vay dự án</span>
+                    <span class="computer tablet only">
+
+                      {!! getConfig('reason.text5') !!}
+                    </span>
+                    <span class="mobile only">
+
+                      {!! getConfig('reason.text6') !!}
+                    </span>
                   </div>
-                  <div class=" text-60 text-white computer tablet only">85%</div>
-                  <div class=" text-60 text-white mobile only">Tối đa 85%</div>
+                  <div class=" text-60 text-white computer tablet only">
+                    {!! getConfig('reason.text7') !!}
+
+
+                  </div>
+                  <div class=" text-60 text-white mobile only">
+                      {!! getConfig('reason.text8') !!}
+
+                  </div>
 
 
                 </div>
                 <div class="block six wide mobile seven wide table computer column mt-30">
                   <div class="text-15 text-white">
                     <div class="circle"></div>
-                    Chất lượng
+                      {!! getConfig('reason.text9') !!}
+
                   </div>
-                  <div class="text-60 text-white">Đảm bảo</div>
+                  <div class="text-60 text-white">
+                    {!! getConfig('reason.text10') !!}
+
+                  </div>
                 </div>
               </div>
 
               <div class="partners">
                 <div class="font-18 font-bold text-white mb-20">
                   Các đối tác uy tín
+
                 </div>
                 <div class="partners-swiper-container swiper-container">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="images/p3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p4.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p4.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p4.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="images/p4.png" />
-                    </div>
+                    <?php
+                      $slides = getConfig('partners', '[]');
+                      $slides = json_decode($slides);
+                    ?>
+                    @foreach ($slides as $item)
+                        <div class="swiper-slide">
+                          <img src="{{ $item->image_url }}" />
+                        </div>
+                    @endforeach
+
+
 
                   </div>
                 </div>
@@ -235,101 +231,26 @@
             <img class='lg2' src="images/lg2.png" />
           </div>
           <div class="s3-steps ui stackable equal width grid">
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">01</div>
-                <div class="text-white text-20 text-bold p2">Trải nghiệm</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">01</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Trải nghiệm</div>
-                  <div class="text-12 text-white mt-40 align-left">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
-                    đăng ký</div>
+            <?php
+              $slides = getConfig('steps', '[]');
+              $slides = json_decode($slides);
+            ?>
+            @foreach ($slides as $key => $item)
+              <div class="s3-step column">
+                <div class="title">
+                  <div class="text-white text-60 p1">{{ $key++ }}</div>
+                  <div class="text-white text-20 text-bold p2">{{ $item->title }}</div>
                 </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">02</div>
-                <div class="text-white text-20 text-bold p2">Khảo sát</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">02</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Khảo sát</div>
-                  <div class="text-12 text-white mt-40 align-left">Nhà thầu khảo sát điều kiện lắp đặt và khả năng đấu
-                    nối.</div>
-                </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">03</div>
-                <div class="text-white text-20 text-bold p2">Ký kết</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">03</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Ký kết</div>
-                  <div class="text-12 text-white mt-40 align-left">Ký hợp đồng vay và hợp đồng EPC</div>
-                </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">04</div>
-                <div class="text-white text-20 text-bold p2">Lắp đặt</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">04</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Lắp đặt</div>
-                  <div class="text-12 text-white mt-40 align-left">Thi công lắp đặt và nghiệm thu</div>
-                </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">05</div>
-                <div class="text-white text-20 text-bold p2">Giải ngân</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">05</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Giải ngân</div>
-                  <div class="text-12 text-white mt-40 align-left">Giải ngân thanh toán tiền mua sắm thiết bị</div>
-                </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">06</div>
-                <div class="text-white text-20 text-bold p2">Vận hành</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">06</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Vận hành</div>
-                  <div class="text-12 text-white mt-40 align-left">Nhà cung cấp hỗ trợ vận hành và bảo trì thiết bị
+                <div class="overlay">
+                  <div class="text-60 text-white mt-40 step-order">{{ $key++ }}</div>
+                  <div class="step-content">
+                    <div class="text-20 text-bold text-white mt-40">{{ $item->title }}</div>
+                    <div class="text-12 text-white mt-40 align-left">{{ $item->text }}</div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">07</div>
-                <div class="text-white text-20 text-bold p2">Tất toán</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">07</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Tất toán</div>
-                  <div class="text-12 text-white mt-40 align-left">Khách hàng đủ năng lực tài chính tất toán khoản vay
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
+
           </div>
 
           <a class="go-to-action text-30 computer only" href="#dang-ky">
@@ -535,7 +456,14 @@
       </div>
 
       <div class="section mt-40" id="section5">
+        <div class="footer-container">
+          <div class="back-to-top computer only">
+            <a href="#gioi-thieu">
+              <div>Lên đầu trang </div><img src="images/top-arrow.png" />
+            </a>
+          </div>
           @include('frontend.footer')
+        </div>
       </div>
 
     </div>

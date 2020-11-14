@@ -50,7 +50,9 @@
 
     </div>
 
+    <div class="footer-container">
       @include('frontend.footer')
+    </div>
 
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuA-yX_z3esO2vmem94LRPFe4NGE9LLUw&callback=initMap&libraries=&v=weekly"

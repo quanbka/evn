@@ -104,7 +104,9 @@
     </div>
     </div>
 
-    @include('frontend.footer')
+    <div class="footer-container">
+      @include('frontend.footer')
+    </div>
 </body>
 
 </html>

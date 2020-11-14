@@ -238,11 +238,11 @@
             @foreach ($slides as $key => $item)
               <div class="s3-step column">
                 <div class="title">
-                  <div class="text-white text-60 p1">{{ $key++ }}</div>
+                  <div class="text-white text-60 p1">{{ $key + 1 }}</div>
                   <div class="text-white text-20 text-bold p2">{{ $item->title }}</div>
                 </div>
                 <div class="overlay">
-                  <div class="text-60 text-white mt-40 step-order">{{ $key++ }}</div>
+                  <div class="text-60 text-white mt-40 step-order">{{ $key + 1 }}</div>
                   <div class="step-content">
                     <div class="text-20 text-bold text-white mt-40">{{ $item->title }}</div>
                     <div class="text-12 text-white mt-40 align-left">{{ $item->text }}</div>

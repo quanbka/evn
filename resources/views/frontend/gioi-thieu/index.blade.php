@@ -34,22 +34,9 @@
               <img src="images/bg-8.png" />
             </div>
             <div class="nine wide computer nine wide tablet sixteen wide mobile column slide-content">
-              <div class="text-14 text-justify mb-40">Công ty Tài chính Cổ phần Điện lực được chính thức thành lập và
-                hoạt
-                động từ ngày 01
-                tháng 9 năm 2008 với sứ mệnh là đầu mối thu xếp vốn, quản trị vốn cho các dự án điện thuộc Tập đoàn Điện
-                lực Việt nam và các đơn vị thành viên, đồng thời cung cấp các sản phẩm dịch vụ tài chính chuyên nghiệp
-                cho các đơn vị trong ngành điện và các đơn vị thuộc các thành phần kinh tế khác. Trải qua hơn 10 năm
-                hoạt động, Công ty đã không ngừng lớn mạnh cả về số lượng và chất lượng với uy tín và vị thế ngày càng
-                được khẳng định trên thị trường tài chính trong và ngoài nước.
-              </div>
 
-              <div class="text-14 text-justify">Với tầm nhìn “Trở thành một định chế tài chính tổng hợp cung cấp các
-                dịch vụ với chất
-                lượng tốt nhất trên nền tảng công nghệ hiện đại”, EVNFinance đã và đang đưa ra những giải pháp tài chính
-                tốt nhất, phù hợp với nhu cầu ngày càng đa dạng của thị trường, mang lại những giá trị về kinh tế và
-                cộng đồng cho đất nước.
-              </div>
+                {!! getConfig('about.text1') !!}
+
             </div>
           </div>
         </div>
@@ -63,83 +50,51 @@
           </div>
 
           <div class="text-14 text-bold mb-20 align-center subtitle">
-            Easy Solar là sản phẩm tài chính được thiết kế nhằm hỗ trợ tối đa về tài chính, kết nối và tư
-            vấn cho khách hàng trong lĩnh vực Điện mặt trời mái nhà
+            {!! getConfig('about.text2') !!}
           </div>
 
           <div class="text-30 text-bold mb-50 align-center">
             Giải pháp
           </div>
           <div class="ui equal width stackable grid list-item">
-            <div class="column item-card">
-              <div>
-                <img src=" images/icon-1.png" />
-                <div class="text-20 text-red align-center text-uppercase text-bold title">Tài chính toàn diện</div>
-                <div class="text-14 text-justify desc">Bên cạnh cam kết đồng hành cùng khách hàng trong xây dựng và đáp
-                  ứng
-                  nhu cầu vốn triển khai dự án, Easy Solar còn đem đến các dịch vụ hữu ích như bảo hiểm, đánh giá kỹ
-                  thuật, thiết bị chất lượng, giá cả cạnh tranh… tạo nên một giải pháp tài chính đồng bộ, toàn diện.
+            <?php
+              $giaiPhap = getConfig('solutions');
+              $giaiPhap = json_decode($giaiPhap);
+            ?>
+            <?php foreach ($giaiPhap as $key => $value): ?>
+              <div class="column item-card">
+                <div>
+                  <img src="{{ $value->image_url }}" />
+                  <div class="text-20 text-red align-center text-uppercase text-bold title">{{ $value->title }}</div>
+                  <div class="text-14 text-justify desc">
+                    {{ $value->text }}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="column item-card">
-              <div>
-                <img src=" images/icon-2.png" />
-                <div class="text-20 text-red align-center text-uppercase text-bold title">Kết nối hiệu quả</div>
-                <div class="text-14 text-justify desc">Với ưu thế là một định chế tài chính có nhiều kinh nghiệm trong
-                  lĩnh
-                  vực
-                  điện năng, khi đến với sản phẩn EasySolar khách hàng sẽ được phục vụ bởi quy trình nhanh gọn, thủ tục
-                  đơn giản, thông tin tổng hợp.
-                </div>
-              </div>
-            </div>
-            <div class="column item-card">
-              <div>
-                <img src=" images/icon-3.png" />
-                <div class="text-20 text-red align-center text-uppercase text-bold title">Tư vấn thông minh</div>
-                <div class="text-14 text-justify desc">Easy Solar được thiết kế để thấu hiểu khách hàng, do đó với hỗ
-                  trợ của
-                  công nghệ số đã biến kinh nghiệm của chúng tôi thành sự trải nghiệm thông minh của khách hàng qua các
-                  thông tin tư vấn đơn giản nhưng đem đến sự hài lòng cao nhất
-                </div>
-              </div>
-            </div>
+            <?php endforeach; ?>
           </div>
           <div class="text-30 text-bold mt-80 mb-50 align-center">
             Lợi ích
           </div>
           <div class="ui equal width stackable grid list-item">
-            <div class="column item-card">
-              <div>
-                <img src=" images/icon-4.png" />
-                <div class="text-20 text-red align-center text-uppercase text-bold title">1 cửa</div>
-                <div class="text-14 text-justify desc">Tương tác khách hàng đều được thực hiện thông qua công nghệ, giúp
-                  tối giản và đơn giản hóa quy trình , thủ tục cho khách hàng
+            <?php
+              $giaiPhap = getConfig('loiich');
+              $giaiPhap = json_decode($giaiPhap);
+            ?>
+            <?php foreach ($giaiPhap as $key => $value): ?>
+              <div class="column item-card">
+                <div>
+                  <img src="{{ $value->image_url }}" />
+                  <div class="text-20 text-red align-center text-uppercase text-bold title">{{ $value->title }}</div>
+                  <div class="text-14 text-justify desc">
+                    {{ $value->text }}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="column item-card">
-              <div>
-                <img src=" images/icon-5.png" />
-                <div class="text-20 text-red align-center text-uppercase text-bold title">1 chính sách</div>
-                <div class="text-14 text-justify desc">Chính sách bán hàng nhất quán và thống nhất trên cơ sở sự hợp tác
-                  giữa tổ chức tín dụng với nhà cung cấp có năng lực trong suốt quá trình vay sẽ đem tới cho khách hàng
-                  điều kiện tín dụng cạnh tranh, giá cả thiết bị rẻ, có chất lượng qua đó đem tới cho khách hàng lợi ích
-                  cao nhất.
-                </div>
-              </div>
-            </div>
-            <div class="column item-card">
-              <div>
-                <img src=" images/icon-3.png" />
-                <div class="text-20 text-red align-center text-uppercase text-bold title">1 chất lượng</div>
-                <div class="text-14 text-justify desc">Khách hàng được lựa chọn những sản phẩm chất lương phù hợp với
-                  nhu cầu và còn được trải nghiệm chất lượng phục vụ với thái độ nhiệt tình,chu đáo,chuyên nghiệp của
-                  đội ngũ nhân viên từ bên cho vay tới nhà cung cấp.
-                </div>
-              </div>
-            </div>
+            <?php endforeach; ?>
+
+
+
           </div>
         </div>
       </div>
@@ -152,101 +107,26 @@
             <img class='lg2' src="images/lg2.png" />
           </div>
           <div class="s3-steps ui stackable equal width grid">
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">01</div>
-                <div class="text-white text-20 text-bold p2">Trải nghiệm</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">01</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Trải nghiệm</div>
-                  <div class="text-12 text-white mt-40 align-left">Khách hàng trải nghiệm – hình thành nhu cầu và gửi
-                    đăng ký</div>
+            <?php
+              $slides = getConfig('steps', '[]');
+              $slides = json_decode($slides);
+            ?>
+            @foreach ($slides as $key => $item)
+              <div class="s3-step column">
+                <div class="title">
+                  <div class="text-white text-60 p1">{{ $key + 1 }}</div>
+                  <div class="text-white text-20 text-bold p2">{{ $item->title }}</div>
                 </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">02</div>
-                <div class="text-white text-20 text-bold p2">Khảo sát</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">02</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Khảo sát</div>
-                  <div class="text-12 text-white mt-40 align-left">Nhà thầu khảo sát điều kiện lắp đặt và khả năng đấu
-                    nối.</div>
-                </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">03</div>
-                <div class="text-white text-20 text-bold p2">Ký kết</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">03</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Ký kết</div>
-                  <div class="text-12 text-white mt-40 align-left">Ký hợp đồng vay và hợp đồng EPC</div>
-                </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">04</div>
-                <div class="text-white text-20 text-bold p2">Lắp đặt</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">04</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Lắp đặt</div>
-                  <div class="text-12 text-white mt-40 align-left">Thi công lắp đặt và nghiệm thu</div>
-                </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">05</div>
-                <div class="text-white text-20 text-bold p2">Giải ngân</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">05</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Giải ngân</div>
-                  <div class="text-12 text-white mt-40 align-left">Giải ngân thanh toán tiền mua sắm thiết bị</div>
-                </div>
-              </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">06</div>
-                <div class="text-white text-20 text-bold p2">Vận hành</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">06</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Vận hành</div>
-                  <div class="text-12 text-white mt-40 align-left">Nhà cung cấp hỗ trợ vận hành và bảo trì thiết bị
+                <div class="overlay">
+                  <div class="text-60 text-white mt-40 step-order">{{ $key + 1 }}</div>
+                  <div class="step-content">
+                    <div class="text-20 text-bold text-white mt-40">{{ $item->title }}</div>
+                    <div class="text-12 text-white mt-40 align-left">{{ $item->text }}</div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="s3-step column">
-              <div class="title">
-                <div class="text-white text-60 p1">07</div>
-                <div class="text-white text-20 text-bold p2">Tất toán</div>
-              </div>
-              <div class="overlay">
-                <div class="text-60 text-white mt-40 step-order">07</div>
-                <div class="step-content">
-                  <div class="text-20 text-bold text-white mt-40">Tất toán</div>
-                  <div class="text-12 text-white mt-40 align-left">Khách hàng đủ năng lực tài chính tất toán khoản vay
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
+
           </div>
         </div>
       </div>

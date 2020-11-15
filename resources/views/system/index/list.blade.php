@@ -3,9 +3,13 @@
         border-radius: 0 !important;
         -webkit-appearance: none;
     }
+    td {
+        max-width: 200px;
+        word-wrap: break-word;
+    }
 </style>
 <div class="box box-solid">
-    <div class="box-body">
+    <div class="box-body table-responsive">
 
         <table class="table table-bordered">
             <tbody>

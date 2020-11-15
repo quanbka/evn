@@ -21,6 +21,13 @@
                         'page' => "gioi-thieu",
                         'name' => "giới thiệu"
                     ],
+
+                    [
+                        'page' => "ho-tro",
+                        'name' => "hỗ trợ"
+                    ],
+
+
                     [
                         'page' => "global",
                         'name' => "chung"

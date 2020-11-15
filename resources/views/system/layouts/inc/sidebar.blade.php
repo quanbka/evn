@@ -11,11 +11,34 @@
         </div>
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">Control Panel</li>
-            <li class="active">
-                <a href="/system/index">
-                    <i class="fa fa-dashboard"></i> <span>Cấu hình chung</span>
-                </a>
-            </li>
+            <?php
+                $pages = [
+                    [
+                        'page' => "home",
+                        'name' => "trang chủ"
+                    ],
+                    [
+                        'page' => "gioi-thieu",
+                        'name' => "giới thiệu"
+                    ],
+                    [
+                        'page' => "global",
+                        'name' => "chung"
+                    ],
+                ];
+            ?>
+            @foreach ($pages as $key => $value)
+                <li>
+                    <a href="/system/index?page={{ $value['page'] }}">
+                        <i class="fa fa-cogs"></i> <span>Cấu hình {{ $value['name'] }}</span>
+                    </a>
+                </li>
+            @endforeach
+            <li><a href="/system/shop/product"><i class="fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
+            <li class=""><a href="/system/shop/category"><i class="fa fa-circle-o"></i> Danh mục sản phẩm</a></li>
+
+
+
 
             {{-- <li class="treeview">
                 <a href="#">

@@ -17,8 +17,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 // Route::get('/system/user', 'System\IndexController@user')->name('system-user');
-// Route::get('/system/shop/product', 'System\ShopController@product')->name('system-shop-product');
-// Route::get('/system/shop/category', 'System\ShopController@category')->name('system-shop-category');
+Route::get('/system/shop/product', 'System\ShopController@product')->name('system-shop-product');
+Route::get('/system/shop/category', 'System\ShopController@category')->name('system-shop-category');
 // Route::get('/system/shop/import', 'System\ShopController@showImport')->name('system-shop-import');
 // Route::post('/system/shop/import', 'System\ShopController@import')->name('system-shop-import');
 // Route::get('/system/order', 'System\ShopController@order')->name('system-shop-product');

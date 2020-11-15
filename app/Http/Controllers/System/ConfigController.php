@@ -9,7 +9,7 @@ use View;
 
 class ConfigController extends Controller
 {
-    public function show ($id) {
+    public function show ($id, Request $request) {
         $config = Config::findOrFail($id);
         View::share('config', $config);
         return view('system.config.edit');

@@ -18,8 +18,12 @@ class IndexController extends Controller
       return view("system.$slug.index");
     }
 
-    public function index(){
-        $configs = \App\Models\Config::all();
+    public function index(Request $request){
+        $configs = \App\Models\Config::query();
+        if ($request->has('page')) {
+            $configs->where('page', $request->input('page'));
+        }
+        $configs = $configs->get();
         View::share('configs', $configs);
         return view('system.index.index');
     }

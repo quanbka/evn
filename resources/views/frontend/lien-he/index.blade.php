@@ -14,14 +14,14 @@
         </div>
     </div>
     <div class="contact-content">
-        <div id="map"></div>
+        {!! getConfig('map') !!}
         <div class="ui container">
             <div id="support-section-2" class="mt-60 mb-40">
                 <div class="content">
                     <div class="text-20 text-bold text-uppercase text-white">Tư vấn trực tiếp</div>
-                    <div class="text-40 text-bold text-uppercase text-white">024.2222.9999</div>
-                    <div class="text-14 text-bold text-white">Máy lẻ 761 hoặc 762 hoặc 763</div>
-                    <div class="text-14 text-bold text-white">Hoặc gửi mail tới địa chỉ solar@evnfc.vn</div>
+                    <div class="text-40 text-bold text-uppercase text-white">{{ getConfig('hotline') }}</div>
+                    <div class="text-14 text-bold text-white">{{ getConfig('hotline.text') }}</div>
+                    <div class="text-14 text-bold text-white">Hoặc gửi mail tới địa chỉ {{ getConfig('email') }}</div>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
       @include('frontend.footer')
     </div>
 
-    <script
+    {{-- <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuA-yX_z3esO2vmem94LRPFe4NGE9LLUw&callback=initMap&libraries=&v=weekly"
         defer
     ></script>
@@ -74,7 +74,7 @@
                 map: map,
             });
         }
-    </script>
+    </script> --}}
 </body>
 
 </html>

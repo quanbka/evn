@@ -31,6 +31,10 @@
                         'name' => "liên hệ"
                     ],
                     [
+                        'page' => "nha-cung-cap",
+                        'name' => "nhà cung cấp"
+                    ],
+                    [
                         'page' => "global",
                         'name' => "chung"
                     ],

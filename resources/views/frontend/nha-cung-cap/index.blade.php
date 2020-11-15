@@ -10,7 +10,7 @@
     <div id="front-content">
       <div id="cover-provider">
         <div class="ui container">
-          <div class="text-60 text-uppercase text-white text-bold text-shadow">Nhà cung cấp</div>
+          <div class="text-60 text-uppercase text-white text-bold text-shadow">{{ getConfig("title") }}</div>
         </div>
       </div>
       <div id="front-tabs">
@@ -233,51 +233,25 @@
       <div id="provider-section-2" class="mb-60">
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase  mt-40 mb-30 text-grey">
-            Chức năng – Nhiệm vụ của Nhà cung cấp
+            {{ getConfig("text1") }}
           </div>
 
           <div class="ui stackable grid list-item">
             <div class="three column row mb-20">
-              <div class="column item-card">
-                <div>
-                  <img src=" images/icon-18.png" />
-                  <div class="text-20 text-red align-center text-uppercase text-bold title">KHẢO SÁT THỰC TẾ
-                    ĐỊA ĐIỂM LẮP ĐẶT</div>
-                </div>
-              </div>
-              <div class="column item-card">
-                <div>
-                  <img src=" images/icon-19.png" />
-                  <div class="text-20 text-red align-center text-uppercase text-bold title">TƯ VẤN PHƯƠNG ÁN
-                    LẮP ĐẶT</div>
-                </div>
-              </div>
-              <div class="column item-card">
-                <div>
-                  <img src=" images/icon-20.png" />
-                  <div class="text-20 text-red align-center text-uppercase text-bold title">TIẾN HÀNH KÝ HỢP ĐỒNG VÀ
-                    LẮP ĐẶT, NGHIỆM THU</div>
-                </div>
-              </div>
+                <?php
+                    $slides = json_decode(getConfig('missions', '[]'));
+                ?>
+                @foreach ($slides as $key => $value)
+                    <div class="column item-card">
+                      <div>
+                        <img src=" images/icon-18.png" />
+                        <div class="text-20 text-red align-center text-uppercase text-bold title">KHẢO SÁT THỰC TẾ
+                          ĐỊA ĐIỂM LẮP ĐẶT</div>
+                      </div>
+                    </div>
+                @endforeach
             </div>
-            <div class="three column centered row">
-              <div class="column item-card">
-                <div>
-                  <img src=" images/icon-21.png" />
-                  <div class="text-20 text-red align-center text-uppercase text-bold title">HỖ TRỢ ĐẦU NỐI
-                    CHO KHÁCH HÀNG</div>
-                </div>
-              </div>
-              <div class="column item-card">
-                <div>
-                  <img src=" images/icon-22.png" />
-                  <div class="text-20 text-red align-center text-uppercase text-bold title">
-                    ĐẢM BẢO TRÁCH NHIỆM VÀ QUYỀN
-                    HẠN THEO HỢP ĐỒNG HỢP TÁC KÝ VỚI EVN FINANCE
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -305,15 +279,15 @@
             </div>
             <div class="partners-swiper-container swiper-container">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="images/lg3.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/p2.png" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/lg3.png" />
-                </div>
+                  <?php
+                    $slides = getConfig('partners', '[]');
+                    $slides = json_decode($slides);
+                  ?>
+                  @foreach ($slides as $item)
+                      <div class="swiper-slide">
+                        <img src="{{ $item->image_url }}" />
+                      </div>
+                  @endforeach
 
               </div>
             </div>
@@ -334,22 +308,7 @@
             <div class="eight wide column inter">
             </div>
             <div class="eight wide column content-box">
-              <div class="text-30 mb-20 text-red">
-                Công ty cổ phần <strong>INTERSOLAR</strong>
-              </div>
-              <div class="text-20 text-bold text-uppercase mb-30">TẦM NHÌN</div>
-              <div class="text-14 mb-30">Doanh nghiệp đầu tư hàng đầu trong lĩnh vực điện mặt trời mái nhà tại Việt Nam.
-                Mang lại giải pháp tối ưu cho bài toán thiếu hụt năng lượng.</div>
-              <div class="text-20 text-bold text-uppercase mb-30">SỨ MỆNH</div>
-              <div class="text-14 mb-30">“Năng Lượng Sạch Cho Cuộc Sống “ Tạo ra nguồn năng lượng sạch với giải pháp
-                công nghệ chất lượng cao và tiết kiệm chi phí..</div>
-              <div class="text-20 text-bold text-uppercase mb-30">GIÁ TRỊ CỐT LÕI</div>
-              <div class="text-14 mb-30">Phát triển các giá trị cốt lõi trên tinh thần hợp tác, sáng tạo để có được
-                nhưng giá trị bền vững cho sự phát triển..</div>
-              <hr />
-              <div class="text-14 mb-30">Ngày 10/10, EVNFinance và nhà thầu InterSolar đã có buổi ký kết thỏa thuận hợp
-                tác toàn diện. Theo đó, InterSolar sẽ trở thành một trong các nhà thầu cung cấp vật tư, thiết bị cho các
-                dự án đầu tư, lắp đặt ĐMTMN được giải ngân từ gói tín dụng Easy Solar.</div>
+              {!! getConfig('about-us-text') !!}
             </div>
 
           </div>

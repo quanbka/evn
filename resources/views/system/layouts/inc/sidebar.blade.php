@@ -26,8 +26,10 @@
                         'page' => "ho-tro",
                         'name' => "hỗ trợ"
                     ],
-
-
+                    [
+                        'page' => "lien-he",
+                        'name' => "liên hệ"
+                    ],
                     [
                         'page' => "global",
                         'name' => "chung"

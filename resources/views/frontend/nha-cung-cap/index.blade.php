@@ -4,6 +4,7 @@
 @include('frontend.head')
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 
   <div id="front-wrapper">
     @include('frontend.header')
@@ -27,45 +28,43 @@
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase  mt-30 text-grey">
             Chính sách sản phẩm
+            @{{ customer }}
+            @{{ dienAp }}
+            @{{ mai }}
+            @{{ he }}
           </div>
           <form class="ui form right aligned">
             <div class="field">
               <div class="three fields">
                 <div class="field">
-                  <select class="ui fluid dropdown">
+                  <select class="ui fluid dropdown" v-model="customer">
                     <option value="" class="text-red">Đối tượng khách hàng</option>
-                    <option value="1">Ngành điện</option>
-                    <option value="2">Ngoài ngành điện</option>
-                    <option value="3">Khác</option>
+                    <option v-for="item in customers" :value="item.value">
+                      @{{ item.display }}
+                  </option>
                   </select>
                 </div>
                 <div class="field">
-                  <select class="ui fluid dropdown">
+                  <select class="ui fluid dropdown" v-model="dienAp">
                     <option value="" class="text-red">Điện áp</option>
-                    <option selected value="1">2-<3</option>
-                    <option value="2">3-<4</option>
-                    <option value="3">4-<5</option>
-                    <option value="4">5-<6</option>
-                    <option value="5">6-<7</option>
-                    <option value="6">7-<8</option>
-                    <option value="7">8-<9</option>
-                    <option value="8">9-<10</option>
-                    <option value="9">>=10</option>
+                    <option v-for="item in dienAps" :value="item">
+                      @{{ item }}
                   </select>
                 </div>
                 <div class="field">
-                  <select class="ui fluid dropdown">
-                    <option value="" class="text-red">Loại mái</option>
-                    <option selected value="1">Mái bằng</option>
-                    <option value="2">Mái tôn</option>
-                    <option value="3">Mái ngói</option>
+                  <select class="ui fluid dropdown" v-model="mai">
+                    <option value="" class="text-red">Mái</option>
+                    <option v-for="item in mais" :value="item.value">
+                      @{{ item.display }}
+                  </option>
                   </select>
                 </div>
                 <div class="field">
-                  <select class="ui fluid dropdown">
+                  <select class="ui fluid dropdown" v-model="he">
                     <option value="" class="text-red">Hệ</option>
-                    <option value="1">1 pha</option>
-                    <option value="2">3 pha</option>
+                    <option v-for="item in hes" :value="item.value">
+                      @{{ item.display }}
+                  </option>
                   </select>
                 </div>
               </div>
@@ -89,7 +88,7 @@
                   <td><p>Hệ 1 pha bao gồm các thiết bị</p></td>
                   <td></td>
                   <td></td>
-                  <td>16,625,000</td>
+                  <td>@{{ price[customer][dienAp][mai][he] }}</td>
                 </tr>
                 <tr>
                   <td>01</td>
@@ -229,6 +228,78 @@
           </div>
         </div>
       </div>
+      <script type="text/javascript">
+        var app = new Vue({
+          el: '#provider-section-1',
+          data: {
+              customer : 'nganh-dien',
+              customers: [
+                  {
+                      'value': 'nganh-dien',
+                      'display': 'Ngành điện',
+                  },
+                  {
+                      'value': 'ngoai-nganh-dien',
+                      'display': 'Ngoài ngành điện',
+                  },
+                  {
+                      'value': 'khac',
+                      'display': 'Khác',
+                  }
+              ],
+              dienAp : '2-<3',
+              dienAps : [
+                  "2-<3",
+                  "3-<4",
+                  "4-<5",
+                  "5-<6",
+                  "6-<7",
+                  "7-<8",
+                  "8-<9",
+                  "9-<10",
+                  "=> 10",
+              ],
+              mai : 'mai-bang',
+              mais : [
+                  {
+                      'value': 'mai-bang',
+                      'display': 'Mái bằng',
+                  },
+                  {
+                      'value': 'mai-ton',
+                      'display': 'Mái tôn',
+                  },
+                  {
+                      'value': 'mai-ngoi',
+                      'display': 'Mái ngói',
+                  }
+              ],
+              he : '1',
+              hes : [
+                  {
+                      'value': '1',
+                      'display': '1 pha',
+                  },
+                  {
+                      'value': '3',
+                      'display': '3 pha',
+                  }
+              ],
+              price : {
+                  'nganh-dien' : {
+                      '2-<3' : {
+                          'mai-bang' : {
+                              "1" : "1920"
+                          }
+                      }
+                  }
+              }
+
+          }
+        })
+
+      </script>
+
 
       <div id="provider-section-2" class="mb-60">
         <div class="ui container">

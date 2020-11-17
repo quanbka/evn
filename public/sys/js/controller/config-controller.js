@@ -74,6 +74,17 @@ function ConfigController($scope, $http, $rootScope, $timeout, Upload) {
         $scope.config.value.splice($index, 1);
     }
 
+    $scope.thumbnail = function (config) {
+        let img = config.image_url;
+        if (img) {
+            ext = (img.substr(img.length - 3))
+            if (ext == 'pdf') {
+                return '/pdf.png';
+            }
+        }
+        return config.image_url;
+    }
+
     $scope.save = function () {
         let data = angular.copy($scope.config);
         if ($scope.config.type == 'slide') {

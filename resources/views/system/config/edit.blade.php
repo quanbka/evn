@@ -16,20 +16,20 @@
         <div class="box-body">
             <div class="form-group" ng-repeat="value in fileds">
                 <label>@{{ value.label }}</label>
-                <input 
-                    ng-if="value.type == 'text'" 
-                    type="text" 
-                    class="form-control" 
-                    name="@{{ value['field'] }}" 
-                    placeholder="Nhập @{{ value.label }}" 
+                <input
+                    ng-if="value.type == 'text'"
+                    type="text"
+                    class="form-control"
+                    name="@{{ value['field'] }}"
+                    placeholder="Nhập @{{ value.label }}"
                     ng-disabled="!value.editable"
                     ng-model="config[value.field]"
                 >
-                <textarea 
+                <textarea
                     ng-if="value.type == 'textarea' && config.type == 'text'"
-                    type="text" class="form-control" 
-                    name="@{{ value.field }}" 
-                    placeholder="Nhập @{{ value.label }}" 
+                    type="text" class="form-control"
+                    name="@{{ value.field }}"
+                    placeholder="Nhập @{{ value.label }}"
                     ng-disabled="!value.editable"
                     ng-model="config[value.field]"
                 >
@@ -46,7 +46,7 @@
                         </tr>
                         <tr ng-repeat="item in config[value.field] track by $index">
                             <td>
-                                <img ng-if="item.image_url" ngf-select="uploadSlideImage($file, item)" src="@{{ item.image_url }}" alt="">
+                                <img ng-if="item.image_url" ngf-select="uploadSlideImage($file, item)" src="@{{ thumbnail(item) }}" alt="">
                                 <div ng-if="!item.image_url">
                                     <a ngf-select="uploadSlideImage($file, item)">
                                         @include('system.inc.no-image-svg')

@@ -35,6 +35,14 @@
                         'name' => "nhà cung cấp"
                     ],
                     [
+                        'page' => "tu-van",
+                        'name' => "tư vấn"
+                    ],
+                    [
+                        'page' => "san-pham",
+                        'name' => "sản phẩm"
+                    ],
+                    [
                         'page' => "global",
                         'name' => "chung"
                     ],

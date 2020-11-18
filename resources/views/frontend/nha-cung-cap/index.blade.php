@@ -28,10 +28,7 @@
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase  mt-30 text-grey">
             Chính sách sản phẩm
-            @{{ customer }}
-            @{{ dienAp }}
-            @{{ mai }}
-            @{{ he }}
+        
           </div>
           <form class="ui form right aligned">
             <div class="field">

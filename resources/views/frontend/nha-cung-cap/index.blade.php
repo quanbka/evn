@@ -88,7 +88,10 @@
                   <td><p>Hệ 1 pha bao gồm các thiết bị</p></td>
                   <td></td>
                   <td></td>
-                  <td>@{{ price[customer][dienAp][mai][he] }}</td>
+                  <td>
+                      @{{ getPrice() }}
+
+                  </td>
                 </tr>
                 <tr>
                   <td>01</td>
@@ -231,6 +234,12 @@
       <script type="text/javascript">
         var app = new Vue({
           el: '#provider-section-1',
+          methods : {
+              getPrice : function () {
+                  let price =  this.price[this.dienAp][this.he][this.mai];
+                  return price.toLocaleString('vi-VN') + ' đ';
+              }
+          },
           data: {
               customer : 'nganh-dien',
               customers: [
@@ -257,20 +266,20 @@
                   "7-<8",
                   "8-<9",
                   "9-<10",
-                  "=> 10",
+                  ">= 10",
               ],
-              mai : 'mai-bang',
+              mai : 'mai_bang',
               mais : [
                   {
-                      'value': 'mai-bang',
+                      'value': 'mai_bang',
                       'display': 'Mái bằng',
                   },
                   {
-                      'value': 'mai-ton',
+                      'value': 'mai_ton',
                       'display': 'Mái tôn',
                   },
                   {
-                      'value': 'mai-ngoi',
+                      'value': 'mai_ngoi',
                       'display': 'Mái ngói',
                   }
               ],
@@ -285,15 +294,8 @@
                       'display': '3 pha',
                   }
               ],
-              price : {
-                  'nganh-dien' : {
-                      '2-<3' : {
-                          'mai-bang' : {
-                              "1" : "1920"
-                          }
-                      }
-                  }
-              }
+              price : {!! json_encode($priceObject) !!}
+
 
           }
         })

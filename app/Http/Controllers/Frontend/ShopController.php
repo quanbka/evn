@@ -17,138 +17,25 @@ class ShopController extends Controller
         $GLOBALS['configs'] = [];
         foreach($configs as $config) {
             $GLOBALS['configs'][$config->key] = $config->value;
+            $tempSlug = str_replace("-", "", $slug);
+            if (method_exists($this, $tempSlug)) {
+                $this->$tempSlug();
+            }
         }
         return view('frontend.'.$slug.'.index');
     }
 
-    public function shop (Request $request) {
-        return view('frontend.index.index');
-    }
-
-    public function about () {
-      return view('frontend.about.index');
-    }
-
-    public function support () {
-      return view('frontend.support.index');
-    }
-
-    public function sanPham () {
-      return view('frontend.product.index');
-    }
-
-    public function nhaCungCap () {
-      return view('frontend.provider.index');
-    }
-
-    public function contact () {
-      return view('frontend.contact.index');
-    }
-
-    public function tuvan () {
-      return view('frontend.tuvan.index');
-    }
-
-    private function buildQueryByOrderBy($query, Request $request){
-        if($request->has('order_by')){
-            if(!is_array($request->input('order_by'))){
-                $orderByField = $request->input('order_by');
-                if($orderByField[0] == '-'){
-                    $orderByField = substr($orderByField, 1);
-                    $query->orderBy($orderByField, 'desc');
-                } else {
-                    $query->orderBy($orderByField, 'asc');
-                }
-            } else {
-                foreach ($request->input('order_by') as $orderByField) {
-                    if($orderByField[0] == '-'){
-                        $orderByField = substr($orderByField, 1);
-                        $query->orderBy($orderByField, 'desc');
-                    } else {
-                        $query->orderBy($orderByField, 'asc');
-                    }
-                }
+    public function nhacungcap () {
+        $prices = \App\Models\Price::all();
+        $priceObject = [];
+        foreach ($prices as $key => $value) {
+            if (!isset($priceObject[$value->cong_suat])) {
+                $priceObject[$value->cong_suat] = [];
             }
+            $priceObject[$value->cong_suat][$value->he] = $value;
         }
-    }
-
-    public function category($slug, $id, Request $request){
-        $category = Category::findOrFail($id);
-        $title = $category->name;
-        $products = $category->getChildenProducts()->paginate(12);
-        if ($request->has('order_by')) {
-            $query = $category->getChildenProducts();
-            $this->buildQueryByOrderBy($query, $request);
-            $products = $query->paginate(12);
-        }
-        return view('frontend.shop.category', compact('title', 'products'));
-    }
-
-    public function product($slug, $id, Request $request){
-        $product = Product::findOrFail($id);
-        $title = $product->name;
-        $product->meta_title = $product->meta_title ? $product->meta_title : $product->name;
-        $product->meta_description = $product->meta_description ? $product->meta_description : $product->description;
-        $products = \App\Models\Product::search($title)->take(5)->get();
-        $relatedProducts = [];
-        foreach ($products as $value) {
-            if ($value->id != $product->id) {
-                $relatedProducts[] = $value;
-            }
-        }
-        return view('frontend.shop.product', compact('product', 'title', 'relatedProducts'));
-    }
-
-    public function recent(){
-        $title = "Sản phẩm mới nhất";
-        $products = \App\Models\Product
-            ::orderBy('id', 'desc')
-            ->paginate(16);
-        return view('frontend.shop.product-list', compact('title', 'products'));
-    }
-
-    public function search (Request $request) {
-        $keyword = $request->input('q');
-        View::share('keyword', $keyword);
-        $title = "Kết quả tìm kiếm cho từ khóa '" . $keyword . "'";
-        // $products = \App\Models\Product
-        //     // ::where('name', 'like', "%$keyword%")
-        //     ::select('*')
-        //     ->addSelect(\DB::raw("MATCH(name)AGAINST('$keyword') as score"))
-        //     ->whereRaw("MATCH(name, description, content)AGAINST('$keyword')")
-        //     ->orWhere('name', 'like', "%$keyword%")
-        //     ->orderBy("score", 'desc')
-        //     ->paginate();
-        $products =  \App\Models\Product::search($keyword)->paginate();
-        foreach ($request->all() as $key => $value) {
-            $products = $products->appends($key, $request->input($key));
-        }
-        return view('frontend.shop.product-list', compact('title', 'products'));
-    }
-
-    public function redirect ($keyword) {
-        // $keyword = str_replace("-", " ", $keyword);
-        // print_r($keyword); die;
-        // return \Redirect::route('search', ['q' => $keyword]);
-    }
-
-    public function sale(){
-        $title = "Sản phẩm đang giảm giá";
-        $products = \App\Models\Product::whereNotNull('old_price')
-            ->where('old_price', '>', 0)
-            ->orderBy('id', 'desc')
-            ->paginate(16);
-        return view('frontend.shop.product-list', compact('title', 'products'));
-    }
-
-    public function collection(){
-        $title = "Bộ sưu tập";
-        return view('frontend.shop.collection', compact('title'));
-    }
-
-    public function design(){
-        $title = "Thiết kế nội thất";
-        return view('frontend.shop.design', compact('title'));
+        // dd($priceObject);
+        View::share('priceObject', $priceObject);
     }
 
     public function order($id = 0){

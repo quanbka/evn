@@ -25,6 +25,8 @@ Route::get('/system/shop/category', 'System\ShopController@category')->name('sys
 // Route::get('/system/blog/blog', 'System\BlogController@blog')->name('system-blog-post');
 // Route::get('/system/blog/category', 'System\BlogController@category')->name('system-blog-category');
 Route::post('/system/upload', 'System\IndexController@upload');
+Route::get('/system/price', 'System\IndexController@price');
+Route::post('/system/price', 'System\IndexController@updatePrice');
 
 Route::get('/', 'Frontend\ShopController@handle');
 Route::get('/system/index', 'System\IndexController@index');

@@ -18,6 +18,26 @@ class IndexController extends Controller
       return view("system.$slug.index");
     }
 
+    public function price () {
+        $prices = \App\Models\Price::all();
+        View::share('prices', $prices);
+        return view("system.price.index");
+    }
+
+    public function updatePrice (Request $request) {
+        // dd($request->all());
+        foreach ($request->except('_token') as $key => $value) {
+            \App\Models\Price::where('id', $key)->update([
+                'mai_bang' => $value['mai_bang'],
+                'mai_ton' => $value['mai_ton'],
+                'mai_ngoi' => $value['mai_ngoi'],
+            ]);
+        }
+        $prices = \App\Models\Price::all();
+        View::share('prices', $prices);
+        return view("system.price.index");
+    }
+
     public function index(Request $request){
         $configs = \App\Models\Config::query();
         if ($request->has('page')) {

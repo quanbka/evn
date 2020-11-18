@@ -55,8 +55,7 @@
                     </a>
                 </li>
             @endforeach
-            <li><a href="/system/shop/product"><i class="fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
-            <li class=""><a href="/system/shop/category"><i class="fa fa-circle-o"></i> Danh mục sản phẩm</a></li>
+            <li><a href="/system/price"><i class="fa fa-circle-o"></i> Cấu hình giá (NCC)</a></li>
 
 
 

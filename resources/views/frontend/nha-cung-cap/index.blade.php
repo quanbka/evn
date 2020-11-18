@@ -38,7 +38,7 @@
               <div class="three fields">
                 <div class="field">
                   <select class="ui fluid dropdown" v-model="customer">
-                    <option value="" class="text-red">Đối tượng khách hàng</option>
+                    <option value="" class="text-red" disabled>Đối tượng khách hàng</option>
                     <option v-for="item in customers" :value="item.value">
                       @{{ item.display }}
                   </option>
@@ -46,14 +46,14 @@
                 </div>
                 <div class="field">
                   <select class="ui fluid dropdown" v-model="dienAp">
-                    <option value="" class="text-red">Điện áp</option>
+                    <option value="" class="text-red" disabled>Điện áp</option>
                     <option v-for="item in dienAps" :value="item">
                       @{{ item }}
                   </select>
                 </div>
                 <div class="field">
                   <select class="ui fluid dropdown" v-model="mai">
-                    <option value="" class="text-red">Mái</option>
+                    <option value="" class="text-red" disabled>Mái</option>
                     <option v-for="item in mais" :value="item.value">
                       @{{ item.display }}
                   </option>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="field">
                   <select class="ui fluid dropdown" v-model="he">
-                    <option value="" class="text-red">Hệ</option>
+                    <option value="" class="text-red" disabled>Hệ</option>
                     <option v-for="item in hes" :value="item.value">
                       @{{ item.display }}
                   </option>
@@ -82,8 +82,8 @@
                   <th class="text-20">Đơn giá (VNĐ)</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr class="bold-text">
+              <tbody v-if="he == 1">
+                <tr class="bold-text" >
                   <td></td>
                   <td><p>Hệ 1 pha bao gồm các thiết bị</p></td>
                   <td></td>
@@ -97,133 +97,136 @@
                   <td>01</td>
                   <td><p>Tấm quang điện Mono Halfcell Longi 445wp, đáp ứng tiêu chuẩn quốc tế IEC, UL và CE</p></td>
                   <td>Tấm</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>02</td>
                   <td>Inverter Growatt - 1 pha</td>
                   <td>Bộ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr class="active">
                   <td>03</td>
                   <td><p>Hệ thống giám sát và phân tích dữ liệu hệ thống năng lượng sạch tích hợp. Giám sát mọi lúc, mọi nơi qua internet, tự động phân tích dữ liệu, thống kê, dự doán các vấn đề/ sự cố của hệ thống</p></td>
                   <td>Hệ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>04</td>
                   <td><p>Tủ điện tiêu chuẩn hòa lưới EVN</p></td>
                   <td>Tủ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>05</td>
                   <td><p>Vận chuyển từ kho các chi nhánh đến công trình trong vòng bán kính 30km</p></td>
                   <td>Lần</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>06</td>
                   <td><p>Giàn khung nhôm/ inox thiết kế theo tiêu chuẩn quốc tế, dễ lắp đặt trên mọi loại mái</p></td>
                   <td>Bộ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>07</td>
                   <td><p>Phụ kiện và dây dẫn đạt chuẩn, theo quy định kỹ thuật hòa lưới EVN</p></td>
                   <td>Bộ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>08</td>
                   <td><p>Khảo sát</p></td>
                   <td>Lần</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>09</td>
                   <td><p>Thiết kế, thi công lắp đặt, bản vẽ hoàn công, nghiệm thu, bàn giao hệ thống đưa vào sử dụng</p></td>
                   <td>Tấm</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
+            </tbody>
+            <tbody v-if="he == 3">
+
                 <tr class="bold-text">
                   <td></td>
                   <td><p >Hệ 3 pha bao gồm các thiết bị</p></td>
                   <td></td>
                   <td></td>
-                  <td>19,950,000</td>
+                  <td>@{{ getPrice() }}</td>
                 </tr>
                 <tr>
                   <td>01</td>
                   <td><p>Tấm quang điện Mono Halfcell Longi 445wp, đáp ứng tiêu chuẩn quốc tế IEC, UL và CE</p></td>
                   <td>Tấm</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>02</td>
                   <td><p>Inverter Growatt - 3 pha</p></td>
                   <td>Bộ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>03</td>
                   <td><p>Hệ thống giám sát và phân tích dữ liệu hệ thống năng lượng sạch tích hợp. Giám sát mọi lúc, mọi nơi qua internet, tự động phân tích dữ liệu, thống kê, dự doán các vấn đề/ sự cố của hệ thống</p></td>
                   <td>Hệ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>04</td>
                   <td><p>Tủ điện tiêu chuẩn hòa lưới EVN</p></td>
                   <td>Tủ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>05</td>
                   <td><p>Vận chuyển từ kho các chi nhánh đến công trình trong vòng bán kính 30km</p></td>
                   <td>Lần</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>06</td>
                   <td><p>Giàn khung nhôm/ inox thiết kế theo tiêu chuẩn quốc tế, dễ lắp đặt trên mọi loại mái</p></td>
                   <td>Bộ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>07</td>
                   <td><p>Phụ kiện và dây dẫn đạt chuẩn, theo quy định kỹ thuật hòa lưới EVN</p></td>
                   <td>Bộ</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>08</td>
                   <td><p>Khảo sát</p></td>
                   <td>Lần</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
                 <tr>
                   <td>09</td>
                   <td><p>Thiết kế, thi công lắp đặt, bản vẽ hoàn công, nghiệm thu, bàn giao hệ thống đưa vào sử dụng</p></td>
                   <td>Tấm</td>
-                  <td>2-<3</td>
+                  <td>@{{ dienAp }}</td>
                   <td>-</td>
                 </tr>
               </tbody>

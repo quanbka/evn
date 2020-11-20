@@ -1013,12 +1013,12 @@ button a:hover {
     right: 0;
 }
 
-#support-section-1 .accordion {
+#support-section-1 .accordion, #product-section-4 .accordion {
   border-radius: 0 !important;
   border: 0 !important;
 }
 
-#support-section-1 .title {
+#support-section-1 .title, #product-section-4 .title {
   background: #EAEAEA;
   border: 0;
   min-height: 60px;
@@ -1027,11 +1027,11 @@ button a:hover {
   padding: 15px 40px 15px 20px !important;
 }
 
-#support-section-1 .accordion .content {
+#support-section-1 .accordion .content, #product-section-4 .accordion .content {
   height: 100px;
 }
 
-#support-section-1 .title.odd {
+#support-section-1 .title.odd, #product-section-4 .title.odd {
   background: #DFE4E8;
 }
 

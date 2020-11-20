@@ -10,6 +10,7 @@
           </div>
           <div class="eleven wide column">
             <div class="top-menu">
+              <a href="/" class="menu-item font-14 text-bold text-uppercase"><img style="width: 26px;" src="images/home-solid.png" /></a>
               <div class="dropdown">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                   <a href="/gioi-thieu" class="item font-14 text-bold text-uppercase">Giới thiệu </a>
@@ -45,7 +46,7 @@
             <div class="bottom-menu">
               <div class="dropdown">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <a href="/san-pham" class="item font-14 text-bold text-uppercase">Sản phẩm </a>
+                  <a href="/san-pham" class="item font-14 text-bold text-uppercase">Cho vay </a>
                   <!-- <img src="./images/angle-down-solid.png" /> -->
                 </div>
                 <div class="dropdown-content">
@@ -78,8 +79,9 @@
                 <div class="dropdown-content">
                   <ul>
                     <li><a href="https://solar.evn.com.vn/#/calculator" target="_blank">Công cụ khảo sát EVNSOLAR</a></li>
-                    <li>Thủ tục điện</li>
+                    <li><a href="/tu-van#electrical-procedures">Thủ tục điện</a></li>
                     <li>Pháp luật</li>
+                    <li><a href="/tu-van#electric-knowledge">Kiến thức điện</a></li>
                   </ul>
                 </div>
               </div>
@@ -113,7 +115,7 @@
         </div>
       </div>
       <a href="/lien-he" class="item font-14 text-bold text-uppercase">Liên hệ</a>
-      <a href="/san-pham" class="item font-14 text-bold text-uppercase">Sản phẩm</a>
+      <a href="/san-pham" class="item font-14 text-bold text-uppercase">Cho vay</a>
       <a href="/nha-cung-cap" class="item font-14 text-bold text-uppercase">Nhà cung cấp</a>
       <a href="https://solar.evn.com.vn/#/calculator" target="_blank"
         class="item font-14 text-bold text-uppercase">Tư vấn

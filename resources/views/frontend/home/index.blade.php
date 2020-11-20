@@ -104,6 +104,9 @@
 
           </div>
         </div>
+        <div class="back-to-top-icon">
+          <a href="#gioi-thieu"><img src="images/top-arrow-blue.png" /></a>
+        </div>
 
       </div>
       <div class="section" id="section2">
@@ -221,6 +224,9 @@
             </div>
           </div>
         </div>
+        <div class="back-to-top-icon">
+          <a href="#gioi-thieu"><img src="images/top-arrow.png" /></a>
+        </div>
       </div>
 
       <div class="section" id="section3">
@@ -259,6 +265,9 @@
               <img src="images/arrow-down.png">
             </div>
           </a>
+        </div>
+        <div class="back-to-top-icon">
+          <a href="#gioi-thieu"><img src="images/top-arrow-blue.png" /></a>
         </div>
       </div>
 
@@ -453,8 +462,10 @@
               những thay đổi đó hay chưa.</p>
           </div>
         </div>
+        <div class="back-to-top-icon">
+          <a href="#gioi-thieu"><img src="images/top-arrow-blue.png" /></a>
+        </div>
       </div>
-
       <div class="section mt-40" id="section5">
         <div class="footer-container">
           <div class="back-to-top computer only">
@@ -465,7 +476,6 @@
           @include('frontend.footer')
         </div>
       </div>
-
     </div>
 
     <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>

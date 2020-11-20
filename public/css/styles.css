@@ -425,7 +425,9 @@ button a:hover {
 }
 
 .partners .swiper-slide img {
+  height: 100%;
   width: 100%;
+  object-fit: contain;
 }
 
 #section2 .swiper-button-prev, #section2 .swiper-container-rtl .swiper-button-next, #section2 .swiper-button-next, #section2 .swiper-container-rtl .swiper-button-prev {
@@ -1476,6 +1478,17 @@ input[type=number] {
 .interest-rate div span {
   color: #B42E2E
 }
+.back-to-top-icon {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1;
+}
+
+.back-to-top-icon img {
+  width: 40px;
+  opacity: 0.65;
+}  
 
 .back-to-top {
   height: 60px;

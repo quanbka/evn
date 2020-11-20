@@ -23,6 +23,7 @@
             <a class="item anchor text-20 text-bold" href="#product-section-1">Đối tượng</a>
             <a class="item anchor text-20 text-bold" href="#product-section-2">Chính sách</a>
             <a class="item anchor text-20 text-bold" href="#product-section-3">Hồ sơ</a>
+            <a class="item anchor text-20 text-bold" href="#product-section-4">Q&A</a>
           </div>
         </div>
       </div>
@@ -160,6 +161,28 @@
               @endforeach
 
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="product-section-4" class="mt-40 mb-60">
+        <div class="ui container">
+          <div class="ui styled fluid accordion">
+              <?php
+                $slides = getConfig('faq', '[]');
+                $slides = json_decode($slides);
+              ?>
+              @foreach ($slides as $item)
+                  <div class="title  odd text-20 text-bold">
+                    {{ $item->title }}<i class="dropdown icon"></i>
+                  </div>
+                  <div class="content ">
+                    <p class="transition visible text-14" style="display: block !important;">{{ $item->text }}</p>
+                  </div>
+
+              @endforeach
+
+
           </div>
         </div>
       </div>

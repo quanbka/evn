@@ -329,7 +329,7 @@
         </div>
       </div>
 
-      <div id="provider-section-3">
+      <!-- <div id="provider-section-3">
         <div class="ui container">
           <div class="download-form">
             <div class="button-box">
@@ -339,11 +339,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div id="provider-section-2" class="mb-60">
         <div class="ui container">
-          <div class="text-30 text-bold align-center text-uppercase  mt-80  text-grey">
+          <div class="text-30 text-bold align-center text-uppercase  mt-40  text-grey">
             Đối tác
           </div>
           <div class="partners">

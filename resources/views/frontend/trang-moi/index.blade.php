@@ -20,9 +20,8 @@
         <div id="front-tabs">
             <div class="container ui">
                 <div class="tabs-container">
-                    <a class="item anchor text-20 text-bold" href="#electrical-procedures">Thủ tục điện</a>
+                    <a class="item anchor text-20 text-bold" href="#">Thủ tục điện</a>
                     <a class="item anchor text-20 text-bold" href="#">Pháp luật</a>
-                    <a class="item anchor text-20 text-bold" href="#electric-knowledge">Kiến thức điện</a>
                 </div>
             </div>
         </div>
@@ -50,55 +49,6 @@
 
             </table>
         </div>
-        <div id="electrical-procedures" class="template-reference">
-            <table id="front-table" class="ui single line table padding-first-child">
-                <thead>
-                    <tr>
-                        <th colspan="2">Thủ tục điện</td>
-                    </tr>
-                </thead>
-                <?php
-                  $slides = getConfig('thu-tuc', '[]');
-                  $slides = json_decode($slides);
-                ?>
-                @foreach ($slides as $key => $item)
-                    <tr>
-                        <td>
-                          <p>{{ $item->title }}</p>
-                        </td>
-                        <td>
-                            <a href="{{ $item->image_url }}" target="_blank" ><i class="ui icon arrow alternate circle down"></i></a>
-                        </td>
-                    </tr>
-                @endforeach
-
-            </table>
-        </div>
-        <div id="electric-knowledge" class="template-reference">
-            <table id="front-table" class="ui single line table padding-first-child">
-                <thead>
-                    <tr>
-                        <th colspan="2">Kiến thức điện</td>
-                    </tr>
-                </thead>
-                <?php
-                  $slides = getConfig('kien-thuc', '[]');
-                  $slides = json_decode($slides);
-                ?>
-                @foreach ($slides as $key => $item)
-                    <tr>
-                        <td>
-                          <p>{{ $item->title }}</p>
-                        </td>
-                        <td>
-                            <a href="{{ $item->image_url }}" target="_blank" ><i class="ui icon arrow alternate circle down"></i></a>
-                        </td>
-                    </tr>
-                @endforeach
-
-            </table>
-        </div>
-
     </div>
 
     <div id="front-bottom">

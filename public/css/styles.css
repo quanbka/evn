@@ -841,7 +841,6 @@ button a:hover {
 }
 
 #front-table tr td {
-  white-space: break-spaces;
   text-align: justify;
   border: 0;
   height: 75px;
@@ -1062,7 +1061,7 @@ select option:first-child {
   justify-content: center;
 }
 
-.provider-func .item-card {
+.item-card {
   margin-bottom: 10px !important;
 }
 

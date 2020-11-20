@@ -54,7 +54,7 @@
             <table id="front-table" class="ui single line table padding-first-child">
                 <thead>
                     <tr>
-                        <th colspan="2">Thủ tục điện</td>
+                        <th colspan="2">Văn bản thủ tục điện</td>
                     </tr>
                 </thead>
                 <?php
@@ -78,7 +78,7 @@
             <table id="front-table" class="ui single line table padding-first-child">
                 <thead>
                     <tr>
-                        <th colspan="2">Kiến thức điện</td>
+                        <th colspan="2">Văn bản kiến thức điện</td>
                     </tr>
                 </thead>
                 <?php

@@ -309,7 +309,7 @@
             {{ getConfig("text1") }}
           </div>
 
-          <div class="ui stackable grid list-item">
+          <div class="ui stackable grid list-item provider-func">
             <div class="three column row mb-20">
                 <?php
                     $slides = json_decode(getConfig('missions', '[]'));

@@ -841,6 +841,8 @@ button a:hover {
 }
 
 #front-table tr td {
+  white-space: break-spaces;
+  text-align: justify;
   border: 0;
   height: 75px;
   font-size: 14px;
@@ -1056,9 +1058,18 @@ select option:first-child {
 .hide-mobile {
   display: block;
 }
+.provider-func {
+  justify-content: center;
+}
+
+.provider-func .item-card {
+  margin-bottom: 10px !important;
+}
 
 @media only screen and (max-width: 768px) { 
-
+  .back-to-top-icon {
+    display: none
+  }
   .advisory-btn {
     font-size: 16px !important;
   }

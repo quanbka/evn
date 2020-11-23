@@ -28,7 +28,7 @@
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase  mt-30 text-grey">
             Chính sách sản phẩm
-        
+
           </div>
           <form class="ui form right aligned">
             <div class="field">
@@ -317,9 +317,8 @@
                 @foreach ($slides as $key => $value)
                     <div class="column item-card">
                       <div>
-                        <img src=" images/icon-18.png" />
-                        <div class="text-20 text-red align-center text-uppercase text-bold title">KHẢO SÁT THỰC TẾ
-                          ĐỊA ĐIỂM LẮP ĐẶT</div>
+                        <img src="{{ $value->image_url }}" />
+                        <div class="text-20 text-red align-center text-uppercase text-bold title">{{ $value->title }}</div>
                       </div>
                     </div>
                 @endforeach

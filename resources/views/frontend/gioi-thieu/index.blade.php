@@ -26,7 +26,7 @@
       <div id="section-1">
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase mb-40 mt-30 text-grey">
-            Giới thiệu về
+            {{ getConfig('title') }} về
             <img class="section-img-finance" src='images/logo.png' />
           </div>
           <div class="ui stackable grid">

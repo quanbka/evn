@@ -10,7 +10,7 @@
     <div id="front-content">
         <div id="cover-contact">
             <div class="ui container">
-            <div class="text-60 text-uppercase text-white text-bold text-shadow">Liên hệ </div>
+            <div class="text-60 text-uppercase text-white text-bold text-shadow">{{ getConfig('title') }}</div>
         </div>
     </div>
     <div class="contact-content">

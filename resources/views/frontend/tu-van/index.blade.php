@@ -10,7 +10,7 @@
     <div id="front-content">
         <div id="cover-advisory">
             <div class="ui container">
-            <div class="text-60 text-uppercase text-white text-bold text-shadow">TƯ VẤN - TRẢI  NGHIỆM </div>
+            <div class="text-60 text-uppercase text-white text-bold text-shadow">{{ getConfig('title') }}</div>
             <a class="button-primary anchor advisory-btn" href="https://solar.evn.com.vn/#/calculator" target="_blank">
                 Công cụ khảo sát EVNSOLAR
             </a>

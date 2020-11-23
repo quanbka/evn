@@ -106,8 +106,8 @@
                 ?>
                 @foreach ($doiTuong as $key => $value)
                     <tr>
-                      <td>{{ $value->title }}</td>
-                      <td>{{ $value->text }}</td>
+                      <td><p>{{ $value->title }}</p></td>
+                      <td><p>{{ $value->text }}</p></td>
                     </tr>
 
                 @endforeach
@@ -166,6 +166,9 @@
       </div>
 
       <div id="product-section-4" class="mt-40 mb-60">
+        <div class="text-30 text-bold align-center text-uppercase  mt-30 mb-40 text-grey">
+          Q&A Sản phẩm
+        </div>
         <div class="ui container">
           <div class="ui styled fluid accordion">
               <?php

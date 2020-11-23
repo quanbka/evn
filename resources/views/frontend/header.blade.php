@@ -106,7 +106,7 @@
   </div>
 
   <div class="pushable">
-    <div id="sidebar" class="ui sidebar index-sidebar vertical menu">
+    <div id="sidebar" class="ui sidebar {{ isset($sidebarClass) ? $sidebarClass : "other-sidebar" }} vertical menu">
       <button class="side-bar-close-icon"><i class="close icon"></i></button>
       <div class="sidebar-search">
         <div class="tem ui icon input">

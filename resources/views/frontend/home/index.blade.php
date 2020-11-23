@@ -15,7 +15,7 @@
     <div id="front-index-content"></div>
     <div id="fullpage">
       <div class="section" id="section0">
-        @include('frontend.header')
+        @include('frontend.header', ['sidebarClass' => 'index-sidebar'])
         <div class="ui container">
           <div class="content">
             <p class="text-22 text-white mb-0 text-shadow">

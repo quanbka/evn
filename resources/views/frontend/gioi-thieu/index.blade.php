@@ -11,7 +11,7 @@
     <div id="front-content">
       <div id="cover-intro">
         <div class="ui container">
-          <div class="text-60 text-uppercase text-white text-bold text-shadow">Giới thiệu</div>
+          <div class="text-60 text-uppercase text-white text-bold text-shadow">{{ getConfig('title') }}</div>
         </div>
       </div>
       <div id="front-tabs">

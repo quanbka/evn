@@ -237,7 +237,7 @@
           methods : {
               getPrice : function (he) {
                   let price =  this.price[this.dienAp][he][this.mai];
-                  return price.toLocaleString('vi-VN') + ' đ';
+                  return price.toLocaleString('vi-VN');
               }
           },
           data: {

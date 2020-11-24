@@ -22,6 +22,7 @@ class ShopController extends Controller
                 $this->$tempSlug();
             }
         }
+        View::share('slug', $slug);
         return view('frontend.'.$slug.'.index');
     }
 

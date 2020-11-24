@@ -1156,7 +1156,7 @@ select option:first-child {
     margin-top: 200px;
   }
   .ui.sidebar.visible a:last-child {
-    border-top: 1px solid #FFF !important;
+    /* border-top: 1px solid #FFF !important; */
   }
   .ui.vertical.menu .item:before {
     height: 0;

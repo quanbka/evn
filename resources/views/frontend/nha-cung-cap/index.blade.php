@@ -85,10 +85,7 @@
                   <td><p>Hệ 1 pha bao gồm các thiết bị</p></td>
                   <td></td>
                   <td></td>
-                  <td>
-                      @{{ getPrice(1) }}
-
-                  </td>
+                  <td>@{{ getPrice(1) }}</td>
                 </tr>
                 <tr>
                   <td>01</td>

@@ -81,7 +81,7 @@
                       <div class="five wide computer six wide tablet sixteen wide mobile column slide-content">
                         <div class="text-20 p1 text-white"><img class="logo-solution" src="./images/lg4.png" /></div>
                         <div class="text-36 p2 text-white mt-30">{{ $item->text }}</div>
-                        {{-- <div class="text-20 p3">Giới thiệu</div> --}}
+                        <div class="text-20 p3">Giới thiệu</div>
                       </div>
                       <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
                         <img class="slide-img" src="{{ $item->image_url }}">

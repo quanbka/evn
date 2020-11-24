@@ -175,7 +175,7 @@
                 $slides = getConfig('faq', '[]');
                 $slides = json_decode($slides);
               ?>
-              @foreach ($slides as $item)
+              @foreach ($slides as $key => $item)
                   <div class="title text-20 text-bold {{ $key % 2 ? 'odd' : ''}}">
                         {{ $item->title }}<i class="dropdown icon"></i>
                   </div>

@@ -79,14 +79,14 @@
                   <th class="text-20">Đơn giá (VNĐ)</th>
                 </tr>
               </thead>
-              <tbody v-if="he == 1">
+              <tbody v-if="he == 1 || !he">
                 <tr class="bold-text" >
                   <td></td>
                   <td><p>Hệ 1 pha bao gồm các thiết bị</p></td>
                   <td></td>
                   <td></td>
                   <td>
-                      @{{ getPrice() }}
+                      @{{ getPrice(1) }}
 
                   </td>
                 </tr>
@@ -154,14 +154,14 @@
                   <td>-</td>
                 </tr>
             </tbody>
-            <tbody v-if="he == 3">
+            <tbody v-if="he == 3  || !he">
 
                 <tr class="bold-text">
                   <td></td>
                   <td><p >Hệ 3 pha bao gồm các thiết bị</p></td>
                   <td></td>
                   <td></td>
-                  <td>@{{ getPrice() }}</td>
+                  <td>@{{ getPrice(3) }}</td>
                 </tr>
                 <tr>
                   <td>01</td>
@@ -235,13 +235,13 @@
         var app = new Vue({
           el: '#provider-section-1',
           methods : {
-              getPrice : function () {
-                  let price =  this.price[this.dienAp][this.he][this.mai];
+              getPrice : function (he) {
+                  let price =  this.price[this.dienAp][he][this.mai];
                   return price.toLocaleString('vi-VN') + ' đ';
               }
           },
           data: {
-              customer : 'nganh-dien',
+              customer : '',
               customers: [
                   {
                       'value': 'nganh-dien',
@@ -283,7 +283,7 @@
                       'display': 'Mái ngói',
                   }
               ],
-              he : '1',
+              he : '',
               hes : [
                   {
                       'value': '1',

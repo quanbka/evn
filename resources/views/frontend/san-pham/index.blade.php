@@ -176,8 +176,8 @@
                 $slides = json_decode($slides);
               ?>
               @foreach ($slides as $item)
-                  <div class="title  odd text-20 text-bold">
-                    {{ $item->title }}<i class="dropdown icon"></i>
+                  <div class="title text-20 text-bold {{ $key % 2 ? 'odd' : ''}}">
+                        {{ $item->title }}<i class="dropdown icon"></i>
                   </div>
                   <div class="content ">
                     <p class="transition visible text-14" style="display: block !important;">{{ $item->text }}</p>

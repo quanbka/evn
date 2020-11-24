@@ -40,7 +40,7 @@
             'text' => 'Liên hệ',
         ],
         [
-            'url' => '/login',
+            'url' => '#',
             'text' => 'Đăng nhập',
         ],
         [

@@ -181,7 +181,7 @@
     <div class="tablet mobile only row">
       <div class="column">
         <div class="ui menu">
-          <a href="#" class="item">
+          <a href="/" class="item">
             <img class="logo" src="images/logo.png">
           </a>
           <div class="right menu">

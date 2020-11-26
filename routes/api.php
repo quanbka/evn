@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
  */
 Route::get('/user', 'Service\ApiService@index');
 
+Route::get('/price', 'Service\PriceService@index');
+
 /**
  * Authenticate api
  */

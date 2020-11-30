@@ -259,7 +259,7 @@
 
           </div>
 
-          <a class="go-to-action text-30 computer only" href="#dang-ky">
+          <a class="go-to-action text-30 computer only" href="/#dang-ky">
             Đăng ký gói vay
             <div class="img-box">
               <img src="images/arrow-down.png">

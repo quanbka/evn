@@ -63,7 +63,7 @@
         <div class="ui container">
           <div class="ui stackable grid">
             <div class="eight wide column">
-              <a class="text-30 anchor" href="index.html#gioi-thieu">
+              <a class="text-30 anchor" href="/#dang-ky">
                 Đăng ký <strong> Gói vay</strong>
               </a>
             </div>

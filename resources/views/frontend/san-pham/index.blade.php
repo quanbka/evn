@@ -12,7 +12,7 @@
         <div class="ui container">
           <div class="text-60 text-uppercase text-white text-bold text-shadow">{{ getConfig('title') }}</div>
           <div class="text-40 text-bold text-white mb-20 text-shadow">{{ getConfig('subtitle') }}</div>
-          <a class="button-primary anchor product-register-btn" href="index.html#dang-ky">
+          <a class="button-primary anchor product-register-btn" href="/#dang-ky">
             Đăng ký vay
           </a>
         </div>

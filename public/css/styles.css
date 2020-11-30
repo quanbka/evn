@@ -1066,7 +1066,26 @@ select option:first-child {
 }
 
 @media only screen and (max-width: 768px) {
-  
+  .template-mobile {
+    width: calc(100% - 70px);
+    overflow-x: auto;
+
+  }
+  .ui.table:not(.unstackable) thead {
+      display: contents !important;
+  }
+  #front-table tr {
+    display: revert !important;
+  }
+  .contact-content .container {
+    width: 80% !important;
+    left: 40% !important;
+
+  }
+  #front-table {
+
+    min-width: 992px;
+  }
   .item-card>div:hover {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -1411,7 +1430,7 @@ select option:first-child {
   }
   #front-table tr td {
     height: unset;
-    white-space: pre-wrap;
+    white-space: inherit;
   }
   .partners .partners-swiper-container {
     margin: 0 -20px !important;
@@ -1703,8 +1722,20 @@ select:not(:focus):invalid {
   width: 100%;
 }
 
+.template-title-table {
+  height: 75px;
+  background-color: #1D4994;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1127px;
+  margin: 50px auto 0px;
+  width: calc(100% - 70px);
+}
+
 .advisory-content #front-table {
-  margin: 40px 0px 100px;
+  margin: 0px 0px 70px;
 }
 
 .advisory-content #front-table i.icon {

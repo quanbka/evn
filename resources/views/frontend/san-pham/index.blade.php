@@ -137,7 +137,7 @@
         </div>
       </div>
 
-      <div id="product-section-5" class="mb-100">
+      <div id="product-section-5" class="mb-50">
         <div class="text-30 text-bold align-center text-uppercase  mt-30 mb-40 text-grey">
           Thủ tục
         </div>
@@ -169,7 +169,7 @@
       </div>
 
       <div id="product-section-4" class="mt-40 mb-60">
-        <div class="text-30 text-bold align-center text-uppercase  mt-30 mb-40 text-grey">
+        <div class="text-30 text-bold align-center text-uppercase mb-40 text-grey">
           Q&A Sản phẩm
         </div>
         <div class="ui container">
@@ -197,7 +197,7 @@
         <div class="ui container">
           <div class="ui stackable grid">
             <div class="eight wide column">
-              <a class="text-30 anchor" href="index.html#form">
+              <a class="text-30 anchor" href="/#dang-ky">
                 Đăng ký <strong> Gói vay</strong>
               </a>
             </div>

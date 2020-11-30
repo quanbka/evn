@@ -433,7 +433,7 @@
                       <br />
                     </div> -->
                 <div class="field" style="display: flex; justify-content: center;">
-                  <button class="loan-request-btn">
+                  <button id="submit-btn" class="loan-request-btn">
                     Gửi yêu cầu vay <img src="./images/arrow-right-w.png" />
                   </button>
                 </div>
@@ -867,6 +867,7 @@
                 $(".contact-form input").val("");
                 $(".contact-form textarea").val("");
                 var x = '<div class="alert-danger-2" style="padding:10px 15px; color: #fff;  margin-bottom:30px; font-weight: 400; background-color: #4CAF50 !important">Gửi yêu cầu vay thành công!</div>';
+                document.getElementById('register-form').reset();
                 // x.className = "show";
                 $("#result").hide().html(x).slideDown();
                 $(".contact_btn i").addClass("d-none");
@@ -910,6 +911,7 @@
                 x = `<div class="alert-danger-2" style="padding:10px 15px; color: #fff; font-weight: 400; margin-bottom:30px; background-color: #930000 !important">${JSON.parse(response.responseText).message}</div>`;
               } else {
                 x = '<div class="alert-danger-2" style="padding:10px 15px; color: #fff;  margin-bottom:30px; font-weight: 400; background-color: #4CAF50 !important">Gửi yêu cầu vay thành công!</div>'
+                document.getElementById('register-form').reset();
               }
               // x.className = "show";
               $("#result").hide().html(x).slideDown();

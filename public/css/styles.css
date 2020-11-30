@@ -1029,7 +1029,7 @@ button a:hover {
 }
 
 #support-section-1 .accordion .content, #product-section-4 .accordion .content {
-  height: 100px;
+  /* height: 100px; */
 }
 
 #support-section-1 .title.odd, #product-section-4 .title.odd {
@@ -1066,6 +1066,11 @@ select option:first-child {
 }
 
 @media only screen and (max-width: 768px) {
+  
+  .item-card>div:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
   .back-to-top-icon {
     display: none
   }
@@ -1387,7 +1392,7 @@ select option:first-child {
     align-items: flex-start;
   }
   .item-card>div {
-    max-height: 220px;
+    /* max-height: 220px; */
     min-height: 100px;
   }
   #product-section-2 .item-card>div {

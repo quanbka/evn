@@ -18,7 +18,7 @@ $(document).ready(function () {
   // });
 
   $('.other-sidebar').sidebar({
-    context: $('#front-content'),
+    context: $('#front-wrapper'),
     transition: 'overlay'
   }).sidebar('attach events', '#mobile_item');
 

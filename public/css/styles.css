@@ -566,6 +566,11 @@ button a:hover {
   background-size: cover;
 }
 
+.ho-so-text{
+  margin: auto;
+  max-width: 1127px ;
+}
+
 #front-wrapper .s3-step .overlay::before {
   content: '';
   position: absolute;

@@ -69,7 +69,7 @@
           </form>
 
           <div class="front-table-box prd-table">
-            <table id="front-table" class="ui single line stackable table">
+            <table id="front-table" class="table">
               <thead>
                 <tr>
                   <th class="text-20">STT</th>

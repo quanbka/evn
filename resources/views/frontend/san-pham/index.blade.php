@@ -95,8 +95,8 @@
           Hồ sơ
         </div>
 
-        <div class="ui container">
-          <table id="front-table" class="ui single line table padding-first-child">
+        <div class="ui container template-mobile">
+          <table id="front-table" class="table padding-first-child">
             <thead>
               <tr>
                 <th class="text-20">Loại hồ sơ</th>
@@ -117,10 +117,10 @@
 
             </tbody>
           </table>
-          <div class="text-14 text-italic pl-50 mb-40">
+        </div>
+          <div class="text-14 text-italic pl-50 mb-40 ho-so-text">
             {{ getConfig('ho-so-text') }}
           </div>
-        </div>
       </div>
 
 
@@ -128,7 +128,7 @@
         <div class="ui container">
           <div class="download-form">
             <div class="button-box">
-              <button class="button-primary">
+              <button class="download-template-btn text-20">
                 Tải hồ sơ biểu mẫu
                 <i class="ui icon arrow alternate circle down"></i>
               </button>
@@ -212,13 +212,13 @@
         </div>
       </div>
 
-
+      <div class="footer-container">
+        @include('frontend.footer')
+      </div>
 
     </div>
 
-    <div class="footer-container">
-      @include('frontend.footer')
-    </div>
+    
 
     <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
     <script

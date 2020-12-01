@@ -26,13 +26,15 @@
                 </div>
             </div>
         </div>
-        <div class="template-reference">
-            <table id="front-table" class="ui single line table padding-first-child">
-                <thead>
+
+        <div class="template-title-table">VĂN BẢN THAM KHẢO</div>
+        <div class="template-reference template-mobile">
+            <table id="front-table" class="table padding-first-child">
+                <!-- <thead>
                     <tr>
                         <th colspan="2">VĂN BẢN THAM KHẢO</td>
                     </tr>
-                </thead>
+                </thead> -->
                 <?php
                   $slides = getConfig('van-ban', '[]');
                   $slides = json_decode($slides);
@@ -50,13 +52,15 @@
 
             </table>
         </div>
-        <div id="electrical-procedures" class="template-reference">
-            <table id="front-table" class="ui single line table padding-first-child">
-                <thead>
+            
+        <div class="template-title-table">VĂN BẢN THỦ TỤC ĐIỆN</div>
+        <div id="electrical-procedures" class="template-reference template-mobile">
+            <table id="front-table" class="table padding-first-child">
+                <!-- <thead>
                     <tr>
                         <th colspan="2">Văn bản thủ tục điện</td>
                     </tr>
-                </thead>
+                </thead> -->
                 <?php
                   $slides = getConfig('thu-tuc', '[]');
                   $slides = json_decode($slides);
@@ -74,13 +78,15 @@
 
             </table>
         </div>
-        <div id="electric-knowledge" class="template-reference">
-            <table id="front-table" class="ui single line table padding-first-child">
-                <thead>
+
+        <div class="template-title-table">VĂN BẢN KIẾN THỨC ĐIỆN</div>
+        <div id="electric-knowledge" class="template-reference template-mobile">
+            <table id="front-table" class="table padding-first-child">
+                <!-- <thead>
                     <tr>
                         <th colspan="2">Văn bản kiến thức điện</td>
                     </tr>
-                </thead>
+                </thead> -->
                 <?php
                   $slides = getConfig('kien-thuc', '[]');
                   $slides = json_decode($slides);
@@ -119,10 +125,9 @@
             </div>
         </div>
     </div>
-    </div>
-
     <div class="footer-container">
-      @include('frontend.footer')
+        @include('frontend.footer')
+    </div>
     </div>
 </body>
 

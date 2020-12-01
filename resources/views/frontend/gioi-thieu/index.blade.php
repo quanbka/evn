@@ -150,9 +150,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer-container">
-      @include('frontend.footer')
+      <div class="footer-container">
+        @include('frontend.footer')
+      </div>
     </div>
 
     <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>

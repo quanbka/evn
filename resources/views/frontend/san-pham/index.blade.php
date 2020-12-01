@@ -43,7 +43,7 @@
                   <div class="column item-card">
                     <div>
                       <img src="{{ $value->image_url }}" />
-                      <div class="text-14 text-justify desc">
+                      <div class="text-14 text-center desc">
                           {{ $value->text }}
                       </div>
                     </div>
@@ -77,7 +77,7 @@
                         <div class="text-20 text-red align-center text-uppercase text-bold title">
                             {{ $value->title }}
                         </div>
-                        <div class="text-14 text-justify desc">
+                        <div class="text-14 text-center desc">
                             {{ $value->text }}
                         </div>
                       </div>
@@ -218,7 +218,7 @@
 
     </div>
 
-    
+
 
     <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
     <script

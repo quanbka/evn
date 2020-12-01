@@ -96,7 +96,7 @@
         </div>
 
         <div class="ui container template-mobile">
-          <table id="front-table" class="table padding-first-child">
+          <table id="front-table" class="table padding-first-child" style="width: 100%">
             <thead>
               <tr>
                 <th class="text-20">Loại hồ sơ</th>
@@ -118,7 +118,7 @@
             </tbody>
           </table>
         </div>
-          <div class="text-14 text-italic pl-50 mb-40 ho-so-text">
+          <div class="text-14 text-italic mb-40 mt-10 ho-so-text">
             {{ getConfig('ho-so-text') }}
           </div>
       </div>

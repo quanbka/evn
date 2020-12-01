@@ -18,6 +18,10 @@ class IndexController extends Controller
       return view("system.$slug.index");
     }
 
+    public function hotroPortal() {
+        return view("system.hotro-portal.index");
+    }
+
     public function price () {
         $prices = \App\Models\Price::all();
         View::share('prices', $prices);

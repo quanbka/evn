@@ -92,6 +92,10 @@
                         </div>
                     </div>
                 </div>
+                <div ng-if="config.type == 'editor' && value.field =='value'">
+                    <div ckeditor="options" ng-model="config.value" ></div>
+                </div>
+
             </div>
         </div>
         <!-- /.box-body -->

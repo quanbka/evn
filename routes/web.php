@@ -27,6 +27,7 @@ Route::get('/system/shop/category', 'System\ShopController@category')->name('sys
 Route::post('/system/upload', 'System\IndexController@upload');
 Route::get('/system/price', 'System\IndexController@price');
 Route::post('/system/price', 'System\IndexController@updatePrice');
+Route::get('/system/hotro-portal', 'System\IndexController@hotroPortal');
 
 Route::get('/', 'Frontend\ShopController@handle');
 Route::get('/system/index', 'System\IndexController@index');

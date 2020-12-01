@@ -56,6 +56,7 @@
                 </li>
             @endforeach
             <li><a href="/system/price"><i class="fa fa-circle-o"></i> Cấu hình giá (NCC)</a></li>
+            <li><a href="/system/config/60"><i class="fa fa-circle-o"></i> Hỗ trợ - Portal</a></li>
 
 
 

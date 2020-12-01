@@ -176,11 +176,11 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
 
         Zizaco\Entrust\EntrustServiceProvider::class,
 
         UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         // Barryvdh\Debugbar\ServiceProvider::class,
 

@@ -8,6 +8,14 @@ system.controller("ConfigController", ConfigController);
  */
 function ConfigController($scope, $http, $rootScope, $timeout, Upload) {
     $scope.controllerName = "ConfigController";
+
+    $scope.options = {
+        language: 'en',
+        allowedContent: true,
+        entities: false,
+      filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+      height:500
+    }
     this.__proto__ = new BaseController($scope, $http, $rootScope, Upload);
     $scope.config = config;
     if ($scope.config.type == 'slide') {

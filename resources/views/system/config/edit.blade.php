@@ -52,9 +52,10 @@
                                         @include('system.inc.no-image-svg')
                                     </a>
                                 </div>
+                                <button type="button" name="button" ngf-select="uploadSlideImage($file, item)">Chọn file</button>
                             </td>
                             <td>
-                                <input class="form-control" id="image-@{{ $index }}" type="text" ng-model="item.image_url">
+                                <input class="form-control" id="image-@{{ $index }}" type="text" ng-model="item.image_url" disabled>
                             </td>
                             <td>
                                 <input class="form-control" type="text" ng-model="item.title">

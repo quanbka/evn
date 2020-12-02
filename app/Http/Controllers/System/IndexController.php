@@ -76,11 +76,7 @@ class IndexController extends Controller
         // header('Access-Control-Allow-Credentials: true');
         // header('P3P: CP="There is no P3P policy."');
 
-        // Sanitize input
-        if (preg_match("/([^\w\s\d\-_~,;:\[\]\(\).])|([\.]{2,})/", $temp['name'])) {
-            header("HTTP/1.1 400 Invalid file name.");
-            return;
-        }
+        
 
         // Verify extension
         // if (!in_array(strtolower(pathinfo($temp['name'], PATHINFO_EXTENSION)), array("gif", "jpg", "png", "pdf"))) {
@@ -89,6 +85,12 @@ class IndexController extends Controller
         // }
 
         // Accept upload if there was no origin, or if it is an accepted origin
+        // $temp['name'] = str_slug(explode($temp['name']);
+        $arrayName = (explode('.', $temp['name']));
+        foreach ($arrayName as $key => $value) {
+            $arrayName[$key] = str_slug($value);
+        }
+        $temp['name'] = implode(".", $arrayName);
         $filetowrite = $imageFolder . $temp['name'];
         move_uploaded_file($temp['tmp_name'], $filetowrite);
 

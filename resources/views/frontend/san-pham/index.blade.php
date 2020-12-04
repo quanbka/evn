@@ -32,7 +32,7 @@
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase  mt-30 text-grey">
             Đối tượng áp dụng gói vay
-            <img class="section-img-solar" src='images/lg2.png' />
+            <img class="section-img-solar" src='/images/lg2.png' />
           </div>
 
           <div class="ui three column stackable grid list-item no-border">
@@ -59,7 +59,7 @@
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase  mt-30 text-grey">
             Chính sách sản phẩm
-            <img class="section-img-solar" src='images/lg2.png' />
+            <img class="section-img-solar" src='/images/lg2.png' />
           </div>
           <div class="interest-rate">
               {!! getConfig('chinh-sach-text') !!}
@@ -220,11 +220,11 @@
 
 
 
-    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery-3.3.1.min.js"></script>
     <script
       src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-    <script type="text/javascript" src="lib/fullpage/script.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="/lib/fullpage/script.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

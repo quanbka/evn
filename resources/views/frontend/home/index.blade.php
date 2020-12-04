@@ -4,7 +4,7 @@
 @include('frontend.head')
 
 <body>
-     <link rel="stylesheet" type="text/css" href="lib/fullpage/style.css" />
+     <link rel="stylesheet" type="text/css" href="/lib/fullpage/style.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
       select:not(:focus):invalid {
@@ -20,7 +20,7 @@
           <div class="content">
             <p class="text-22 text-white mb-0 text-shadow">
               {{ getConfig('welcome.title') }}
-              <img class='lg1' src="images/lg1.png" />
+              <img class='lg1' src="/images/lg1.png" />
             </p>
             <hr />
             <h1 class="text-60 text-bold text-white mt-0 mb-20 text-shadow register-btn">
@@ -93,9 +93,9 @@
             <div class="slide-control">
               <div class="ui grid">
                 <div class="five wide computer six wide tablet sixteen wide mobile column buttons">
-                  <div class="swiper-button-prev left-margin"> <img src="images/arrow-left-w.png"></div>
+                  <div class="swiper-button-prev left-margin"> <img src="/images/arrow-left-w.png"></div>
                   <div class="swiper-pagination"> </div>
-                  <div class="swiper-button-next right-margin"><img src="images/arrow-right-w.png"></div>
+                  <div class="swiper-button-next right-margin"><img src="/images/arrow-right-w.png"></div>
                 </div>
                 <div class="eleven wide computer ten wide tablet sixteen wide mobile column">
                 </div>
@@ -105,7 +105,7 @@
           </div>
         </div>
         <div class="back-to-top-icon">
-          <a href="#gioi-thieu"><img src="images/top-arrow-blue.png" /></a>
+          <a href="#gioi-thieu"><img src="/images/top-arrow-blue.png" /></a>
         </div>
 
       </div>
@@ -114,7 +114,7 @@
           <div class="text-16 text-white">Lý do</div>
           <div class=" text-40 text-white mb-40">
             Lựa chọn
-            <img class='lg2' src="images/lg2.png" />
+            <img class='lg2' src="/images/lg2.png" />
           </div>
           <div class="ui grid content-box">
             <div class="five wide computer six wide tablet sixteen wide mobile column content">
@@ -208,24 +208,24 @@
                   </div>
                 </div>
                 <div class="swiper-button-prev partners-button-prev">
-                  <img src="images/arrow-left-w.png">
+                  <img src="/images/arrow-left-w.png">
                 </div>
                 <div class="swiper-button-next partners-button-next">
-                  <img src="images/arrow-right-w.png">
+                  <img src="/images/arrow-right-w.png">
                 </div>
               </div>
 
               <a class="go-to-action text-white text-30 computer only" href=" #thu-tuc">
                 Tìm hiểu các bước vay
                 <div class="img-box">
-                  <img src="images/arrow-down-2.png">
+                  <img src="/images/arrow-down-2.png">
                 </div>
               </a>
             </div>
           </div>
         </div>
         <div class="back-to-top-icon">
-          <a href="#gioi-thieu"><img src="images/top-arrow.png" /></a>
+          <a href="#gioi-thieu"><img src="/images/top-arrow.png" /></a>
         </div>
       </div>
 
@@ -234,7 +234,7 @@
           <div class="text-16">Các bước</div>
           <div class=" text-40 text-red mb-40">
             Vay gói
-            <img class='lg2' src="images/lg2.png" />
+            <img class='lg2' src="/images/lg2.png" />
           </div>
           <div class="s3-steps ui stackable equal width grid">
             <?php
@@ -262,12 +262,12 @@
           <a class="go-to-action text-30 computer only" href="/#dang-ky">
             Đăng ký gói vay
             <div class="img-box">
-              <img src="images/arrow-down.png">
+              <img src="/images/arrow-down.png">
             </div>
           </a>
         </div>
         <div class="back-to-top-icon">
-          <a href="#gioi-thieu"><img src="images/top-arrow-blue.png" /></a>
+          <a href="#gioi-thieu"><img src="/images/top-arrow-blue.png" /></a>
         </div>
       </div>
 
@@ -276,7 +276,7 @@
           <div class="text-16">Để lại thông tin</div>
           <div class=" text-40 text-red mb-0 section4-title">
             Đăng ký <strong>Gói vay</strong>
-            <img class='lg2' src="images/lg2.png" />
+            <img class='lg2' src="/images/lg2.png" />
           </div>
           <div class="ui grid">
             <div class="six wide computer six wide tablet sixteen wide mobile column content">
@@ -463,14 +463,14 @@
           </div>
         </div>
         <div class="back-to-top-icon">
-          <a href="#gioi-thieu"><img src="images/top-arrow-blue.png" /></a>
+          <a href="#gioi-thieu"><img src="/images/top-arrow-blue.png" /></a>
         </div>
       </div>
       <div class="section mt-40" id="section5">
         <div class="footer-container">
           <div class="back-to-top computer only">
             <a href="#gioi-thieu">
-              <div>Lên đầu trang </div><img src="images/top-arrow.png" />
+              <div>Lên đầu trang </div><img src="/images/top-arrow.png" />
             </a>
           </div>
           @include('frontend.footer')
@@ -478,11 +478,11 @@
       </div>
     </div>
 
-    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery-3.3.1.min.js"></script>
     <script
       src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-    <script type="text/javascript" src="lib/fullpage/script.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="/lib/fullpage/script.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

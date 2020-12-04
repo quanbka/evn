@@ -86,11 +86,11 @@
       @include('frontend.footer')
     </div>
 
-    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery-3.3.1.min.js"></script>
     <script
       src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-    <script type="text/javascript" src="lib/fullpage/script.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="/lib/fullpage/script.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

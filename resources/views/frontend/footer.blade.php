@@ -1,6 +1,6 @@
 <div class="ui container ">
   <a href="#">
-    <img class="footer-logo mb-40 mt-40" src="images/logo.png">
+    <img class="footer-logo mb-40 mt-40" src="/images/logo.png">
   </a>
   <div class="ui equal width grid stackable computer only">
     <div class="column">

@@ -120,12 +120,12 @@
         <div class="ui grid front-menu">
           <div class="five wide column">
             <a href="/">
-              <img class="logo" src="images/logo.png">
+              <img class="logo" src="/images/logo.png">
             </a>
           </div>
           <div class="eleven wide column">
             <div class="top-menu">
-              <a href="/" class="menu-item font-14 text-bold text-uppercase"><img style="width: 26px;" src="images/home-solid.png" /></a>
+              <a href="/" class="menu-item font-14 text-bold text-uppercase"><img style="width: 26px;" src="/images/home-solid.png" /></a>
               @foreach ($firstMenu as $menuItem)
                   <div class="dropdown">
                     <div style="display: flex; justify-content: space-between; align-items: center;" {!! getClass($menuItem, $slug) !!}>
@@ -182,7 +182,7 @@
       <div class="column">
         <div class="ui menu">
           <a href="/" class="item">
-            <img class="logo" src="images/logo.png">
+            <img class="logo" src="/images/logo.png">
           </a>
           <div class="right menu">
             <a id="mobile_item" class="item"><i class="bars icon"></i></a>

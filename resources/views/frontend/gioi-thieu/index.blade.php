@@ -27,11 +27,11 @@
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase mb-40 mt-30 text-grey">
             {{ getConfig('title') }} về
-            <img class="section-img-finance" src='images/logo.png' />
+            <img class="section-img-finance" src='/images/logo.png' />
           </div>
           <div class="ui stackable grid">
             <div class="seven wide computer seven wide tablet sixteen wide mobile column slide-content">
-              <img src="images/bg-8.png" />
+              <img src="/images/bg-8.png" />
             </div>
             <div class="nine wide computer nine wide tablet sixteen wide mobile column slide-content">
 
@@ -46,7 +46,7 @@
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase  mt-30 text-grey">
             Giới thiệu về
-            <img class="section-img-solar" src='images/lg2.png' />
+            <img class="section-img-solar" src='/images/lg2.png' />
           </div>
 
           <div class="text-14 text-bold mb-20 align-center subtitle">
@@ -104,7 +104,7 @@
           <div class="text-16">Các bước</div>
           <div class=" text-40 text-red mb-40">
             Vay gói
-            <img class='lg2' src="images/lg2.png" />
+            <img class='lg2' src="/images/lg2.png" />
           </div>
           <div class="s3-steps ui stackable equal width grid">
             <?php
@@ -155,11 +155,11 @@
       </div>
     </div>
 
-    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/lib/jquery-3.3.1.min.js"></script>
     <script
       src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-    <script type="text/javascript" src="lib/fullpage/script.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="/lib/fullpage/script.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

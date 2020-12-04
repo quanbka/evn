@@ -12,7 +12,7 @@ use View;
 class ShopController extends Controller
 {
 
-    public function handle($slug = 'home') {
+    public function handle($page = false, $slug = 'home') {
         $configs = Config::whereIn('page', [$slug, 'global'])->get();
         $GLOBALS['configs'] = [];
         foreach($configs as $config) {
@@ -26,6 +26,9 @@ class ShopController extends Controller
             }
         }
         View::share('slug', $slug);
+        if ($page) {
+            $slug = $page;
+        }
         return view('frontend.'.$slug.'.index');
     }
 

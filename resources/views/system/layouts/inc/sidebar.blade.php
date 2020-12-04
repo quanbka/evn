@@ -38,10 +38,10 @@
                         'page' => "tu-van",
                         'name' => "tư vấn"
                     ],
-                    [
-                        'page' => "san-pham",
-                        'name' => "sản phẩm"
-                    ],
+                    // [
+                    //     'page' => "san-pham",
+                    //     'name' => "sản phẩm"
+                    // ],
                     [
                         'page' => "global",
                         'name' => "chung"
@@ -55,6 +55,7 @@
                     </a>
                 </li>
             @endforeach
+            <li><a href="/system/product"><i class="fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
             <li><a href="/system/price"><i class="fa fa-circle-o"></i> Cấu hình giá (NCC)</a></li>
             <li><a href="/system/config/60"><i class="fa fa-circle-o"></i> Hỗ trợ - Portal</a></li>
 

@@ -6,6 +6,14 @@
             return 'class="prd-active"';
         }
     }
+    $products = \App\Models\Page::all();
+    $productMenu = [];
+    foreach ($products as $key => $value) {
+        $productMenu[] = [
+            'text' => $value->name,
+            'url' => '/san-pham/' . $value->slug
+        ];
+    }
     $menu = [
         [
             'url' => '/gioi-thieu',
@@ -46,16 +54,7 @@
         [
             'url' => '/san-pham',
             'text' => 'Cho vay',
-            'children' => [
-                [
-                    'url' => '/san-pham',
-                    'text' => 'EasySolar CBCNV điện',
-                ],
-                [
-                    'url' => '/san-pham',
-                    'text' => 'EasySolar hộ dân',
-                ],
-            ]
+            'children' => $productMenu
         ],
         [
             'url' => '/nha-cung-cap',

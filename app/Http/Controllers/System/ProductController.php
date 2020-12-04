@@ -56,7 +56,7 @@ class ProductController extends Controller
             ],
             [
                 'key' => 'ho-so-text',
-                'type' => 'slide'
+                'type' => 'text'
             ],
             [
                 'key' => 'subtitle',

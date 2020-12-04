@@ -16,6 +16,9 @@ class ShopController extends Controller
         $configs = Config::whereIn('page', [$slug, 'global'])->get();
         $GLOBALS['configs'] = [];
         foreach($configs as $config) {
+            if ($config->key == 'content' && $config->type == 'editor') {
+                return $config->value;
+            }
             $GLOBALS['configs'][$config->key] = $config->value;
             $tempSlug = str_replace("-", "", $slug);
             if (method_exists($this, $tempSlug)) {

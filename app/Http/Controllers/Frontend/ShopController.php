@@ -27,9 +27,61 @@ class ShopController extends Controller
         }
         View::share('slug', $slug);
         if ($page) {
+            if ($page == 'san-pham') {
+                $this->initProduct($slug);
+            }
             $slug = $page;
         }
         return view('frontend.'.$slug.'.index');
+    }
+
+    public function initProduct ($slug) {
+        $types = [
+            [
+                'key' => 'chinh-sach',
+                'type' => 'slide'
+            ],
+            [
+                'key' => 'chinh-sach-text',
+                'type' => 'text'
+            ],
+            [
+                'key' => 'doi-tuong',
+                'type' => 'slide'
+            ],
+            [
+                'key' => 'ho-so',
+                'type' => 'slide'
+            ],
+            [
+                'key' => 'ho-so-text',
+                'type' => 'slide'
+            ],
+            [
+                'key' => 'subtitle',
+                'type' => 'text'
+            ],
+            [
+                'key' => 'title',
+                'type' => 'text'
+            ],
+        ];
+        foreach ($types as $key => $value) {
+            if (Config::where('page', $slug)->where('key', $value['key'])->first()) {
+
+            } else {
+                $config = new Config;
+                $config->page = $slug;
+                $config->key = $value['key'];
+                $config->type = $value['type'];
+                if ($config->type == 'slide') {
+                    $config->value = '[]';
+                }
+                $config->save();
+
+            }
+        }
+
     }
 
     public function nhacungcap () {

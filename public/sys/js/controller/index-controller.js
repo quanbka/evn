@@ -9,6 +9,6 @@ system.controller("IndexController", IndexController);
 function IndexController($scope, $http, $rootScope, $timeout, Upload) {
     $scope.controllerName = "IndexController";
     this.__proto__ = new BaseController($scope, $http, $rootScope);
-    
+
 
 }

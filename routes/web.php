@@ -32,6 +32,7 @@ Route::get('/system/hotro-portal', 'System\IndexController@hotroPortal');
 Route::get('/', 'Frontend\ShopController@handle');
 Route::get('/system/index', 'System\IndexController@index');
 Route::resource('/system/config', 'System\ConfigController');
+Route::resource('/system/product', 'System\ProductController');
 Route::get('/admin', function () {
     return redirect('/login');
 });

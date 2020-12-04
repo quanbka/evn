@@ -12,7 +12,7 @@ use View;
 class ShopController extends Controller
 {
 
-    public function handle($page = false, $slug = 'home') {
+    public function handle($page = false, $slug = 'home', Request $request) {
         $configs = Config::whereIn('page', [$slug, 'global'])->get();
         $GLOBALS['configs'] = [];
         foreach($configs as $config) {
@@ -29,6 +29,9 @@ class ShopController extends Controller
         if ($page) {
             if ($page == 'san-pham') {
                 $this->initProduct($slug);
+                if ($request->method() == 'POST') {
+                    redirect('/system/index?page=' . $slug);
+                }
             }
             $slug = $page;
         }

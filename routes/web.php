@@ -38,3 +38,4 @@ Route::get('/admin', function () {
 
 Route::get('/{slug}', 'Frontend\ShopController@handle');
 Route::get('/{page}/{slug}', 'Frontend\ShopController@handle');
+Route::post('/{page}/{slug}', 'Frontend\ShopController@handle');

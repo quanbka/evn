@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="" class="control-label">Tên sản phẩm</label>
+                                <label for="" class="control-label">Tên đối tác</label>
                                 <div class="">
                                     <input type="text" class="form-control" ng-model="object.name">
                                 </div>

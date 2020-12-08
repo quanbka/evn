@@ -80,18 +80,9 @@
                     <i class="fa fa-money"></i> <span>Đơn hàng</span>
                 </a>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-shopping-cart"></i> <span>Bài viết</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="/system/blog/blog"><i class="fa fa-circle-o"></i> Danh sách bài viết</a></li>
-                    <li class=""><a href="/system/blog/category"><i class="fa fa-circle-o"></i> Danh mục bài viết</a></li>
-                </ul>
-            </li> --}}
+            --}}
+                <li><a href="/system/blog/blog"><i class="fa fa-circle-o"></i> Danh sách đối tác</a></li>
+
         </ul>
     </section>
 </aside>

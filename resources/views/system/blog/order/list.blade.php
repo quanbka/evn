@@ -12,7 +12,7 @@
                     <th class="col-md-1">ID</th>
                     <th class="col-md-2">Tên khách hàng</th>
                     <th class="col-md-1">Số điện thoại</th>
-                    <th class="col-md-2">Tên sản phẩm</th>
+                    <th class="col-md-2">Tên đối tác</th>
                     <th class="col-md-2">Địa chỉ</th>
                     <th class="col-md-2">Email</th>
                     <th class="col-md-2">Đặt hàng lúc</th>

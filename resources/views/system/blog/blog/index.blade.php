@@ -8,11 +8,11 @@
 @section('content')
 <section class="content-header">
   <h1>
-    Quản lý sản phẩm
+    Quản lý đối tác
   </h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Quản lý sản phẩm</li>
+    <li class="active">Quản lý đối tác</li>
   </ol>
 </section>
 

@@ -11,7 +11,7 @@
             <tbody>
                 <tr>
                     <th class="col-md-1">ID</th>
-                    <th class="col-md-2">Tên sản phẩm</th>
+                    <th class="col-md-2">Tên đối tác</th>
                     <th class="col-md-1">Sorder</th>
                     <th class="col-md-1">Danh mục</th>
                     <th class="col-md-1">Ảnh</th>

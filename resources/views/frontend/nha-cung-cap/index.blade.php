@@ -9,12 +9,12 @@
   <div id="front-wrapper">
     @include('frontend.header')
     <div id="front-content">
-      <div id="cover-provider" style="display: none;">
+      <div id="cover-provider">
         <div class="ui container">
           <div class="text-60 text-uppercase text-white text-bold text-shadow">{{ getConfig("title") }}</div>
         </div>
       </div>
-      <div id="front-tabs"  style="display: none;">
+      <div id="front-tabs" >
         <div class="container ui">
           <div class="tabs-container">
             <a class="item anchor text-20 text-bold" href="#provider-section-1">Chính sách</a>
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div id="provider-section-1"  style="display: none;">
+      <div id="provider-section-1" >
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase  mt-30 text-grey">
             Chính sách sản phẩm
@@ -467,6 +467,11 @@
     });
 
     </script>
+    <style media="screen">
+        .swiper-slide:not(.swiper-slide-active) img {
+            filter: grayscale(1.0);
+        }
+    </style>
 
 </body>
 

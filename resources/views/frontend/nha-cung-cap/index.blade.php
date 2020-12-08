@@ -9,12 +9,12 @@
   <div id="front-wrapper">
     @include('frontend.header')
     <div id="front-content">
-      <div id="cover-provider">
+      <div id="cover-provider" style="display: none;">
         <div class="ui container">
           <div class="text-60 text-uppercase text-white text-bold text-shadow">{{ getConfig("title") }}</div>
         </div>
       </div>
-      <div id="front-tabs">
+      <div id="front-tabs"  style="display: none;">
         <div class="container ui">
           <div class="tabs-container">
             <a class="item anchor text-20 text-bold" href="#provider-section-1">Chính sách</a>
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div id="provider-section-1">
+      <div id="provider-section-1"  style="display: none;">
         <div class="ui container">
           <div class="text-30 text-bold align-center text-uppercase  mt-30 text-grey">
             Chính sách sản phẩm
@@ -325,7 +325,7 @@
         </div>
       </div>
 
-      <!-- <div id="provider-section-3">
+      <div id="provider-section-3">
         <div class="ui container">
           <div class="download-form">
             <div class="button-box">
@@ -335,7 +335,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
       <div id="provider-section-2" class="mb-60">
         <div class="ui container">
@@ -349,12 +349,18 @@
             <div class="partners-swiper-container swiper-container">
               <div class="swiper-wrapper">
                   <?php
-                    $slides = getConfig('partners', '[]');
-                    $slides = json_decode($slides);
+                    $slides = \App\Models\Blog::all();
+                    $contents = [];
+                    foreach ($slides as $key => $value) {
+                        $contents[$value->id] = $value;
+                    }
                   ?>
+                  <script type="text/javascript">
+                      var partners = {!! json_encode($contents) !!};
+                  </script>
                   @foreach ($slides as $item)
-                      <div class="swiper-slide">
-                        <img src="{{ $item->image_url }}" />
+                      <div class="swiper-slide" data-id="{{ $item->id }}">
+                        <img src="{{ $item->image }}" />
                       </div>
                   @endforeach
 
@@ -376,8 +382,8 @@
           <div class="ui stackable grid">
             <div class="eight wide column inter">
             </div>
-            <div class="eight wide column content-box">
-              {!! getConfig('about-us-text') !!}
+            <div class="eight wide column content-box" id="js-content">
+
             </div>
 
           </div>
@@ -427,10 +433,11 @@
           nextEl: '.partners-button-next',
           prevEl: '.partners-button-prev',
         },
+        centeredSlides: true,
         loop: true,
         breakpoints: {
           640: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           768: {
@@ -443,6 +450,22 @@
           },
         }
       })
+
+      function changeContent () {
+          // console.log(mySwiperw.realIndex);
+          // console.log($('.swiper-slide-active'))
+          var all = $(".swiper-slide-active").map(function() {
+            console.log($(this).attr("data-id"));
+            let id = $(this).attr("data-id");
+            console.log(partners[id]);
+            $('#js-content').html(partners[id].content);
+        }).get();
+      }
+      changeContent();
+    mySwiperw.on('slideChangeTransitionEnd', function () {
+        changeContent();
+    });
+
     </script>
 
 </body>

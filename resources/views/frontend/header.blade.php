@@ -65,11 +65,11 @@
                     'text' => 'Chính sách',
                 ],
                 [
-                    'url' => '/nha-cung-cap#provider-section-1',
+                    'url' => '/nha-cung-cap#provider-section-2',
                     'text' => 'Chức năng',
                 ],
                 [
-                    'url' => '/nha-cung-cap#provider-section-1',
+                    'url' => '/nha-cung-cap#provider-section-3',
                     'text' => 'Đối tác',
                 ],
             ]

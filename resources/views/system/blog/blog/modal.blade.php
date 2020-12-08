@@ -55,6 +55,19 @@
                                       </div>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="" class="control-label">Ảnh bìa</label>
+                                <div class="">
+                                    <div class="input-group input-group-sm">
+                                        <input id="banner" type="text" class="form-control" ng-model="object.banner">
+                                            <span class="input-group-btn">
+                                                <a id="lfm2" data-input="banner" class="btn btn-primary">
+                                                  <i class="fa fa-picture-o"></i>
+                                                </a>
+                                            </span>
+                                      </div>
+                                </div>
+                            </div>
                             <img ng-src="@{{ object.image}}" alt="" class="preview-img form-group">
                             <style media="screen">
                                 .preview-img{
@@ -73,6 +86,7 @@
                             <script src="/vendor/laravel-filemanager/js/lfm.js"></script>
                             <script>
                             $('#lfm').filemanager('image');
+                            $('#lfm2').filemanager('banner');
                             </script>
 
                         </div>

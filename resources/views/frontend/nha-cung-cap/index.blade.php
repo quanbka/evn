@@ -380,7 +380,7 @@
       <div id="provider-section-2" class="mb-60">
         <div class="ui container">
           <div class="ui stackable grid">
-            <div class="eight wide column inter">
+            <div class="eight wide column inter" id="inter">
             </div>
             <div class="eight wide column content-box" id="js-content">
 
@@ -459,6 +459,7 @@
             let id = $(this).attr("data-id");
             console.log(partners[id]);
             $('#js-content').html(partners[id].content);
+            $('#inter').css('background-image', `url('${partners[id].banner}')`);
         }).get();
       }
       changeContent();

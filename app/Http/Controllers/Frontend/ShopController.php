@@ -12,7 +12,24 @@ use View;
 class ShopController extends Controller
 {
 
-    public function handle($page = false, $slug = 'home', Request $request) {
+    public function handle($slug = 'home', Request $request) {
+        $configs = Config::whereIn('page', [$slug, 'global'])->get();
+        $GLOBALS['configs'] = [];
+        foreach($configs as $config) {
+            if ($config->key == 'content' && $config->type == 'editor') {
+                return $config->value;
+            }
+            $GLOBALS['configs'][$config->key] = $config->value;
+            $tempSlug = str_replace("-", "", $slug);
+            if (method_exists($this, $tempSlug)) {
+                $this->$tempSlug();
+            }
+        }
+        View::share('slug', $slug);
+        return view('frontend.'.$slug.'.index');
+    }
+
+    public function subhandle($page, $slug = 'home', Request $request) {
         $configs = Config::whereIn('page', [$slug, 'global'])->get();
         $GLOBALS['configs'] = [];
         foreach($configs as $config) {

@@ -455,11 +455,15 @@
           // console.log(mySwiperw.realIndex);
           // console.log($('.swiper-slide-active'))
           var all = $(".swiper-slide-active").map(function() {
-            console.log($(this).attr("data-id"));
+            // console.log($(this).attr("data-id"));
             let id = $(this).attr("data-id");
-            console.log(partners[id]);
+            // console.log(partners[id]);
             $('#js-content').html(partners[id].content);
-            $('#inter').css('background-image', `url('${partners[id].banner}')`);
+            if (partners[id].banner) {
+                $('#inter').css('background-image', `url('${partners[id].banner}')`);
+            } else {
+                $('#inter').css('background-image', `none`);
+            }
         }).get();
       }
       changeContent();

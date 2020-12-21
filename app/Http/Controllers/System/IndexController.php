@@ -28,6 +28,8 @@ class IndexController extends Controller
         return view("system.price.index");
     }
 
+    
+
     public function updatePrice (Request $request) {
         // dd($request->all());
         foreach ($request->except('_token') as $key => $value) {
@@ -76,7 +78,7 @@ class IndexController extends Controller
         // header('Access-Control-Allow-Credentials: true');
         // header('P3P: CP="There is no P3P policy."');
 
-        
+
 
         // Verify extension
         // if (!in_array(strtolower(pathinfo($temp['name'], PATHINFO_EXTENSION)), array("gif", "jpg", "png", "pdf"))) {

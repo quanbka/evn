@@ -14,7 +14,7 @@
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/san-pham', 'Frontend\IndexController@product');
 
 // Route::get('/system/user', 'System\IndexController@user')->name('system-user');
 Route::get('/system/shop/product', 'System\ShopController@product')->name('system-shop-product');

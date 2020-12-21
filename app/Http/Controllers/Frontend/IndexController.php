@@ -23,4 +23,11 @@ class IndexController extends Controller
 
         return response()->view('frontend.sitemap', compact(['domain', 'categories', 'products']))->header('Content-Type', 'text/xml');
     }
+
+    public function product () {
+        $pages = \App\Models\Page::all();
+        \View::share('pages', $pages);
+        \View::share('slug', "san-pham");
+        return view("frontend.pages.index");
+    }
 }
